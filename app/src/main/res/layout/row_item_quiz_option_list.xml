@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_95sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@drawable/shape_rect_border_corner"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgOption"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_95sdp" />
+
+    <RelativeLayout
+        android:id="@+id/rlTrueAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_rect_border_corner_green"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_correct" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFalseAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_rect_border_corner_red"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_wrong" />
+    </RelativeLayout>
+</RelativeLayout>

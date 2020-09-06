@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "488698978142",
+    "firebase_url": "https://atozkids-1a523.firebaseio.com",
+    "project_id": "atozkids-1a523",
+    "storage_bucket": "atozkids-1a523.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488698978142:android:cfcb9aa690059f6e9079cf",
+        "android_client_info": {
+          "package_name": "com.atozkids"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488698978142-g1lagtup0p5aq65rakstjqifilkk33e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu2v98h4U965jYiHsqQsvx3l8Ki6Hdjk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488698978142-g1lagtup0p5aq65rakstjqifilkk33e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

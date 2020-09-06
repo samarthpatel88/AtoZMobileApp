@@ -1,0 +1,14 @@
+package com.atozkids.utils.prefrence
+
+object PreferenceKeys {
+    const val SOUND_SETTING = "SOUND_SETTING"
+    const val MENU_CONTENT = "MENU_CONTENT"
+    const val MENU_LAST_CALL_DATE = "MENU_LAST_CALL_DATE"
+    const val CATEGORY_LIST = "CATEGORY_LIST"
+    const val CATEGORY_LAST_CALL_DATE = "CATEGORY_LAST_CALL_DATE"
+    const val CATEGORY_ITEMS = "CATEGORY_ITEMS"
+    const val CATEGORY_ITEMS_LAST_CALL_DATE = "CATEGORY_ITEMS_LAST_CALL_DATE"
+    const val VOICE_GENDER = "VOICE_GENDER"
+    const val RHYMES_ITEMS = "RHYMES_ITEMS"
+    const val RHYMES_ITEMS_LAST_CALL_DATE = "RHYMES_ITEMS_LAST_CALL_DATE"
+}

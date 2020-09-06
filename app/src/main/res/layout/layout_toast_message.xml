@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lbl_toast"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toast_success_background"
+    android:drawablePadding="@dimen/padding_10"
+    android:drawableTint="@color/colorWhite"
+    android:gravity="center"
+    android:paddingLeft="@dimen/padding_25"
+    android:paddingTop="@dimen/padding_10"
+    android:paddingRight="@dimen/padding_25"
+    android:paddingBottom="@dimen/padding_10"
+    android:text=""
+    android:textColor="@color/colorWhite"
+    android:textSize="@dimen/text_16" />

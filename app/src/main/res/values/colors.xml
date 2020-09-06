@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDark">#7C0D0F0F</color>
+    <color name="colorAppRed">#D62C06</color>
+    <color name="colorAppYellow">#FFC107</color>
+    <color name="colorAppRedAlpha">#97D62C06</color>
+    <color name="colorAppGreenAlpha">#814CAF50</color>
+    <color name="colorAppQuizTitle">#000000</color>
+</resources>

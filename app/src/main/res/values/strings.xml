@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AtoZKids App</string>
+    <string name="str_no_internet_message">Please check your internet connection.</string>
+    <string name="str_share_using">Share using</string>
+    <string name="str_no_information_available">No information available!</string>
+    <string name="str_congratulations">Congratulations!</string>
+    <string name="str_you_have_completed_learning_section">You have completed *n learning section.</string>
+    <string name="str_restart">Restart</string>
+    <string name="str_close">Close</string>
+    <string name="str_privacy_policy">Privacy Policy</string>
+    <string name="str_contact_us">Contact Us</string>
+    <string name="str_select_voice_gender">Select gender</string>
+    <string name="str_save">save</string>
+    <string name="str_rate_us">Rate Us</string>
+    <string name="str_are_you_sure_exit">Are you sure you want to exit?</string>
+    <string name="str_yes">Yes</string>
+    <string name="str_no">No</string>
+    <string name="str_next">Next</string>
+    <string name="str_success">Success!</string>
+    <string name="str_you_have_choose_the_right_answer">You have choose the right answer.</string>
+    <string name="str_result">Result!</string>
+    <string name="str_your_final_score_is">Your final score is:</string>
+    <string name="str_correct">Correct!</string>
+    <string name="str_incorrect">Incorrect!</string>
+    <string name="str_you_have_choose_the_wrong_answer">You have choose the wrong answer.</string>
+    <string name="play_initial_time">00:00</string>
+    <string name="track_number">Track</string>
+</resources>

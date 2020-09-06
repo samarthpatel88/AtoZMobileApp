@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:context=".ui.fragments.LearningItemFragment">
+
+    <ImageView
+        android:id="@+id/imgItem"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp" />
+
+    <ImageView
+        android:id="@+id/imgItemCaption"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp" />
+</LinearLayout>

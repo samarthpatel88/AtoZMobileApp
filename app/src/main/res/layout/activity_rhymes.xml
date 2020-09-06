@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_learning"
+    android:orientation="vertical"
+    tools:context=".ui.activities.RhymesActivity">
+
+    <com.atozkids.utils.widgets.NonSwipeableViewPager
+        android:id="@+id/vpRhymes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imgSound"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_sound" />
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_home" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.example.jean.jcplayer.view.JcPlayerView
+            android:id="@+id/jcPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:next_icon_color="@color/colorWhite"
+            app:pause_icon_color="@color/colorWhite"
+            app:play_icon_color="@color/colorWhite"
+            app:previous_icon_color="@color/colorWhite"
+            app:progress_color="@color/colorWhite"
+            app:random_icon_color="@color/colorWhite"
+            app:repeat_icon_color="@color/colorWhite"
+            app:seek_bar_color="@color/colorWhite"
+            app:text_audio_current_duration_color="@color/colorWhite"
+            app:text_audio_duration_color="@color/colorWhite"
+            app:text_audio_title_color="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>
+
