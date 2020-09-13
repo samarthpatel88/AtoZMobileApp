@@ -202,6 +202,9 @@ class LearningActivity : BaseActivity() {
                                 showCompleteDialog()
                             }
                         }, 10000)
+                    }else{
+                        imgNext.isEnabled = true
+                        imgNext.setImageDrawable(resources.getDrawable(R.drawable.ic_right))
                     }
                 }
 

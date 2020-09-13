@@ -56,6 +56,14 @@
             android:layout_margin="@dimen/_15sdp"
             android:src="@drawable/ic_sound" />
 
+        <ImageView
+            android:id="@+id/imgReplay"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/imgSound"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_replay" />
     </RelativeLayout>
 
     <RelativeLayout

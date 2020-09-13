@@ -6,11 +6,14 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
+import androidx.viewpager.widget.ViewPager
 import com.atozkids.R
 import com.atozkids.data.DataManager
 import com.atozkids.interfaces.OnAnimatedClick
 import com.atozkids.responsemodels.CategoryListResponseModel
+import com.atozkids.responsemodels.QuizResponseModel
 import com.atozkids.ui.adapters.QuizFragmentsAdapter
+import com.atozkids.utils.AudioUtils
 import com.atozkids.utils.ImageUtils
 import com.atozkids.utils.animatedClick
 import com.atozkids.utils.callApi
@@ -21,6 +24,7 @@ class QuizActivity : BaseActivity() {
         const val CATEGORY = "CATEGORY"
     }
 
+    private var quizList: MutableList<QuizResponseModel.Datum> = mutableListOf()
     var quizCounter = 0
 
     lateinit var category: CategoryListResponseModel.Datum
@@ -57,6 +61,17 @@ class QuizActivity : BaseActivity() {
             })
         }
 
+        imgReplay.setOnClickListener {
+            it.animatedClick(object : OnAnimatedClick {
+                override fun onClick() {
+                    if (quizList.isNotEmpty()
+                    ) {
+                        playVoice(quizList)
+                    }
+                }
+            })
+        }
+
         ImageUtils.showImageFromPath(category.categoryicon, imgCategory)
         txtCategory.text = category.categoryname
         getQuizItem()
@@ -70,6 +85,26 @@ class QuizActivity : BaseActivity() {
                     hideLoading()
                     if (it.status) {
                         vpQuizItems.adapter = QuizFragmentsAdapter(supportFragmentManager, it.data)
+                        quizList=it.data
+                        playVoice(it.data)
+                        vpQuizItems.addOnPageChangeListener(object :ViewPager.OnPageChangeListener{
+                            override fun onPageScrollStateChanged(state: Int) {
+
+                            }
+
+                            override fun onPageScrolled(
+                                position: Int,
+                                positionOffset: Float,
+                                positionOffsetPixels: Int
+                            ) {
+
+                            }
+
+                            override fun onPageSelected(position: Int) {
+                                playVoice(it.data)
+                            }
+
+                        })
                     } else {
                         showErrorMsg(it.message)
                     }
@@ -121,4 +156,22 @@ class QuizActivity : BaseActivity() {
         }, 5000)
     }
 
+    /**
+     * play voice based on gender selection for learning item
+     */
+    private fun playVoice(data: MutableList<QuizResponseModel.Datum>) {
+        if (data.isEmpty()) {
+            return
+        }
+
+        if (DataManager.getSound().not()) {
+            return
+        }
+        val mItem = data[vpQuizItems.currentItem]
+        if (DataManager.getVoiceGender() == 0) {
+            AudioUtils.playLearningAudio(mItem.questionAudioMale)
+        } else {
+            AudioUtils.playLearningAudio(mItem.questionAudioFeMale)
+        }
+    }
 }

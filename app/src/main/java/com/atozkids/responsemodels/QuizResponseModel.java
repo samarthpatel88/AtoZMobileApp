@@ -60,6 +60,28 @@ public class QuizResponseModel implements Serializable {
         @SerializedName("Options")
         @Expose
         private List<Option> options = null;
+        @SerializedName("QuestionAudioFeMale")
+        @Expose
+        private String questionAudioFeMale;
+        @SerializedName("QuestionAudioMale")
+        @Expose
+        private String questionAudioMale;
+
+        public String getQuestionAudioFeMale() {
+            return questionAudioFeMale;
+        }
+
+        public void setQuestionAudioFeMale(String questionAudioFeMale) {
+            this.questionAudioFeMale = questionAudioFeMale;
+        }
+
+        public String getQuestionAudioMale() {
+            return questionAudioMale;
+        }
+
+        public void setQuestionAudioMale(String questionAudioMale) {
+            this.questionAudioMale = questionAudioMale;
+        }
 
         public String getQuestionItemImage() {
             return questionItemImage;
