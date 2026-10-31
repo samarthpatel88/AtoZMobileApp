@@ -1,71 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.atozkids">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <!-- Fully offline: no INTERNET permission, no analytics, no ads. -->
 
     <application
-        android:name=".app.App"
-        android:allowBackup="true"
-        android:hardwareAccelerated="false"
+        android:name=".AtoZApp"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <service
-            android:name=".firebase.MyFirebaseMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.atozkids.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
-
-        <service android:name=".services.NewFileDownloaderService" />
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.AtoZKids">
 
         <activity
-            android:name=".ui.activities.RhymesActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.QuizActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.LearningActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.CategorySelectionActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.WebViewActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.DashboardActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ui.activities.SplashActivity"
-            android:screenOrientation="landscape">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|density|uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
 
 </manifest>

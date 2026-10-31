@@ -1,0 +1,1243 @@
+{
+ "categories": [
+  {
+   "id": "alphabet",
+   "title": "Alphabet",
+   "caption": "A to Z",
+   "icon": "img/category/alphabet.webp",
+   "items": [
+    {
+     "id": "alphabet_apple",
+     "name": "Apple",
+     "letter": "A",
+     "image": "img/items/alphabet_apple.webp",
+     "caption": "img/captions/alphabet_apple.webp",
+     "audioMale": "audio/items/alphabet_apple_m.mp3",
+     "audioFemale": "audio/items/alphabet_apple_f.mp3"
+    },
+    {
+     "id": "alphabet_ball",
+     "name": "Ball",
+     "letter": "B",
+     "image": "img/items/alphabet_ball.webp",
+     "caption": "img/captions/alphabet_ball.webp",
+     "audioMale": "audio/items/alphabet_ball_m.mp3",
+     "audioFemale": "audio/items/alphabet_ball_f.mp3"
+    },
+    {
+     "id": "alphabet_cat",
+     "name": "Cat",
+     "letter": "C",
+     "image": "img/items/alphabet_cat.webp",
+     "caption": "img/captions/alphabet_cat.webp",
+     "audioMale": "audio/items/alphabet_cat_m.mp3",
+     "audioFemale": "audio/items/alphabet_cat_f.mp3"
+    },
+    {
+     "id": "alphabet_dog",
+     "name": "Dog",
+     "letter": "D",
+     "image": "img/items/alphabet_dog.webp",
+     "caption": "img/captions/alphabet_dog.webp",
+     "audioMale": "audio/items/alphabet_dog_m.mp3",
+     "audioFemale": "audio/items/alphabet_dog_f.mp3"
+    },
+    {
+     "id": "alphabet_elephant",
+     "name": "Elephant",
+     "letter": "E",
+     "image": "img/items/alphabet_elephant.webp",
+     "caption": "img/captions/alphabet_elephant.webp",
+     "audioMale": "audio/items/alphabet_elephant_m.mp3",
+     "audioFemale": "audio/items/alphabet_elephant_f.mp3"
+    },
+    {
+     "id": "alphabet_fish",
+     "name": "Fish",
+     "letter": "F",
+     "image": "img/items/alphabet_fish.webp",
+     "caption": "img/captions/alphabet_fish.webp",
+     "audioMale": "audio/items/alphabet_fish_m.mp3",
+     "audioFemale": "audio/items/alphabet_fish_f.mp3"
+    },
+    {
+     "id": "alphabet_grapes",
+     "name": "Grapes",
+     "letter": "G",
+     "image": "img/items/alphabet_grapes.webp",
+     "caption": "img/captions/alphabet_grapes.webp",
+     "audioMale": "audio/items/alphabet_grapes_m.mp3",
+     "audioFemale": "audio/items/alphabet_grapes_f.mp3"
+    },
+    {
+     "id": "alphabet_horse",
+     "name": "Horse",
+     "letter": "H",
+     "image": "img/items/alphabet_horse.webp",
+     "caption": "img/captions/alphabet_horse.webp",
+     "audioMale": "audio/items/alphabet_horse_m.mp3",
+     "audioFemale": "audio/items/alphabet_horse_f.mp3"
+    },
+    {
+     "id": "alphabet_ice_cream",
+     "name": "Ice cream",
+     "letter": "I",
+     "image": "img/items/alphabet_ice_cream.webp",
+     "caption": "img/captions/alphabet_ice_cream.webp",
+     "audioMale": "audio/items/alphabet_ice_cream_m.mp3",
+     "audioFemale": "audio/items/alphabet_ice_cream_f.mp3"
+    },
+    {
+     "id": "alphabet_jug",
+     "name": "Jug",
+     "letter": "J",
+     "image": "img/items/alphabet_jug.webp",
+     "caption": "img/captions/alphabet_jug.webp",
+     "audioMale": "audio/items/alphabet_jug_m.mp3",
+     "audioFemale": "audio/items/alphabet_jug_f.mp3"
+    },
+    {
+     "id": "alphabet_kite",
+     "name": "Kite",
+     "letter": "K",
+     "image": "img/items/alphabet_kite.webp",
+     "caption": "img/captions/alphabet_kite.webp",
+     "audioMale": "audio/items/alphabet_kite_m.mp3",
+     "audioFemale": "audio/items/alphabet_kite_f.mp3"
+    },
+    {
+     "id": "alphabet_lion",
+     "name": "Lion",
+     "letter": "L",
+     "image": "img/items/alphabet_lion.webp",
+     "caption": "img/captions/alphabet_lion.webp",
+     "audioMale": "audio/items/alphabet_lion_m.mp3",
+     "audioFemale": "audio/items/alphabet_lion_f.mp3"
+    },
+    {
+     "id": "alphabet_mango",
+     "name": "Mango",
+     "letter": "M",
+     "image": "img/items/alphabet_mango.webp",
+     "caption": "img/captions/alphabet_mango.webp",
+     "audioMale": "audio/items/alphabet_mango_m.mp3",
+     "audioFemale": "audio/items/alphabet_mango_f.mp3"
+    },
+    {
+     "id": "alphabet_nest",
+     "name": "Nest",
+     "letter": "N",
+     "image": "img/items/alphabet_nest.webp",
+     "caption": "img/captions/alphabet_nest.webp",
+     "audioMale": "audio/items/alphabet_nest_m.mp3",
+     "audioFemale": "audio/items/alphabet_nest_f.mp3"
+    },
+    {
+     "id": "alphabet_owl",
+     "name": "Owl",
+     "letter": "O",
+     "image": "img/items/alphabet_owl.webp",
+     "caption": "img/captions/alphabet_owl.webp",
+     "audioMale": "audio/items/alphabet_owl_m.mp3",
+     "audioFemale": "audio/items/alphabet_owl_f.mp3"
+    },
+    {
+     "id": "alphabet_parrot",
+     "name": "Parrot",
+     "letter": "P",
+     "image": "img/items/alphabet_parrot.webp",
+     "caption": "img/captions/alphabet_parrot.webp",
+     "audioMale": "audio/items/alphabet_parrot_m.mp3",
+     "audioFemale": "audio/items/alphabet_parrot_f.mp3"
+    },
+    {
+     "id": "alphabet_queen",
+     "name": "Queen",
+     "letter": "Q",
+     "image": "img/items/alphabet_queen.webp",
+     "caption": "img/captions/alphabet_queen.webp",
+     "audioMale": "audio/items/alphabet_queen_m.mp3",
+     "audioFemale": "audio/items/alphabet_queen_f.mp3"
+    },
+    {
+     "id": "alphabet_rose",
+     "name": "Rose",
+     "letter": "R",
+     "image": "img/items/alphabet_rose.webp",
+     "caption": "img/captions/alphabet_rose.webp",
+     "audioMale": "audio/items/alphabet_rose_m.mp3",
+     "audioFemale": "audio/items/alphabet_rose_f.mp3"
+    },
+    {
+     "id": "alphabet_sheep",
+     "name": "Sheep",
+     "letter": "S",
+     "image": "img/items/alphabet_sheep.webp",
+     "caption": "img/captions/alphabet_sheep.webp",
+     "audioMale": "audio/items/alphabet_sheep_m.mp3",
+     "audioFemale": "audio/items/alphabet_sheep_f.mp3"
+    },
+    {
+     "id": "alphabet_tiger",
+     "name": "Tiger",
+     "letter": "T",
+     "image": "img/items/alphabet_tiger.webp",
+     "caption": "img/captions/alphabet_tiger.webp",
+     "audioMale": "audio/items/alphabet_tiger_m.mp3",
+     "audioFemale": "audio/items/alphabet_tiger_f.mp3"
+    },
+    {
+     "id": "alphabet_umbrella",
+     "name": "Umbrella",
+     "letter": "U",
+     "image": "img/items/alphabet_umbrella.webp",
+     "caption": "img/captions/alphabet_umbrella.webp",
+     "audioMale": "audio/items/alphabet_umbrella_m.mp3",
+     "audioFemale": "audio/items/alphabet_umbrella_f.mp3"
+    },
+    {
+     "id": "alphabet_violin",
+     "name": "Violin",
+     "letter": "V",
+     "image": "img/items/alphabet_violin.webp",
+     "caption": "img/captions/alphabet_violin.webp",
+     "audioMale": "audio/items/alphabet_violin_m.mp3",
+     "audioFemale": "audio/items/alphabet_violin_f.mp3"
+    },
+    {
+     "id": "alphabet_watch",
+     "name": "Watch",
+     "letter": "W",
+     "image": "img/items/alphabet_watch.webp",
+     "caption": "img/captions/alphabet_watch.webp",
+     "audioMale": "audio/items/alphabet_watch_m.mp3",
+     "audioFemale": "audio/items/alphabet_watch_f.mp3"
+    },
+    {
+     "id": "alphabet_xmas_tree",
+     "name": "Xmas Tree",
+     "letter": "X",
+     "image": "img/items/alphabet_xmas_tree.webp",
+     "caption": "img/captions/alphabet_xmas_tree.webp",
+     "audioMale": "audio/items/alphabet_xmas_tree_m.mp3",
+     "audioFemale": "audio/items/alphabet_xmas_tree_f.mp3"
+    },
+    {
+     "id": "alphabet_yak",
+     "name": "Yak",
+     "letter": "Y",
+     "image": "img/items/alphabet_yak.webp",
+     "caption": "img/captions/alphabet_yak.webp",
+     "audioMale": "audio/items/alphabet_yak_m.mp3",
+     "audioFemale": "audio/items/alphabet_yak_f.mp3"
+    },
+    {
+     "id": "alphabet_zebra",
+     "name": "Zebra",
+     "letter": "Z",
+     "image": "img/items/alphabet_zebra.webp",
+     "caption": "img/captions/alphabet_zebra.webp",
+     "audioMale": "audio/items/alphabet_zebra_m.mp3",
+     "audioFemale": "audio/items/alphabet_zebra_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "numbers",
+   "title": "Numbers",
+   "caption": "1 to 10",
+   "icon": "img/category/numbers.webp",
+   "items": [
+    {
+     "id": "numbers_one",
+     "name": "One",
+     "letter": null,
+     "image": "img/items/numbers_one.webp",
+     "caption": "img/captions/numbers_one.webp",
+     "audioMale": "audio/items/numbers_one_m.mp3",
+     "audioFemale": "audio/items/numbers_one_f.mp3"
+    },
+    {
+     "id": "numbers_two",
+     "name": "Two",
+     "letter": null,
+     "image": "img/items/numbers_two.webp",
+     "caption": "img/captions/numbers_two.webp",
+     "audioMale": "audio/items/numbers_two_m.mp3",
+     "audioFemale": "audio/items/numbers_two_f.mp3"
+    },
+    {
+     "id": "numbers_three",
+     "name": "Three",
+     "letter": null,
+     "image": "img/items/numbers_three.webp",
+     "caption": "img/captions/numbers_three.webp",
+     "audioMale": "audio/items/numbers_three_m.mp3",
+     "audioFemale": "audio/items/numbers_three_f.mp3"
+    },
+    {
+     "id": "numbers_four",
+     "name": "Four",
+     "letter": null,
+     "image": "img/items/numbers_four.webp",
+     "caption": "img/captions/numbers_four.webp",
+     "audioMale": "audio/items/numbers_four_m.mp3",
+     "audioFemale": "audio/items/numbers_four_f.mp3"
+    },
+    {
+     "id": "numbers_five",
+     "name": "Five",
+     "letter": null,
+     "image": "img/items/numbers_five.webp",
+     "caption": "img/captions/numbers_five.webp",
+     "audioMale": "audio/items/numbers_five_m.mp3",
+     "audioFemale": "audio/items/numbers_five_f.mp3"
+    },
+    {
+     "id": "numbers_six",
+     "name": "Six",
+     "letter": null,
+     "image": "img/items/numbers_six.webp",
+     "caption": "img/captions/numbers_six.webp",
+     "audioMale": "audio/items/numbers_six_m.mp3",
+     "audioFemale": "audio/items/numbers_six_f.mp3"
+    },
+    {
+     "id": "numbers_seven",
+     "name": "Seven",
+     "letter": null,
+     "image": "img/items/numbers_seven.webp",
+     "caption": "img/captions/numbers_seven.webp",
+     "audioMale": "audio/items/numbers_seven_m.mp3",
+     "audioFemale": "audio/items/numbers_seven_f.mp3"
+    },
+    {
+     "id": "numbers_eight",
+     "name": "Eight",
+     "letter": null,
+     "image": "img/items/numbers_eight.webp",
+     "caption": "img/captions/numbers_eight.webp",
+     "audioMale": "audio/items/numbers_eight_m.mp3",
+     "audioFemale": "audio/items/numbers_eight_f.mp3"
+    },
+    {
+     "id": "numbers_nine",
+     "name": "Nine",
+     "letter": null,
+     "image": "img/items/numbers_nine.webp",
+     "caption": "img/captions/numbers_nine.webp",
+     "audioMale": "audio/items/numbers_nine_m.mp3",
+     "audioFemale": "audio/items/numbers_nine_f.mp3"
+    },
+    {
+     "id": "numbers_ten",
+     "name": "Ten",
+     "letter": null,
+     "image": "img/items/numbers_ten.webp",
+     "caption": "img/captions/numbers_ten.webp",
+     "audioMale": "audio/items/numbers_ten_m.mp3",
+     "audioFemale": "audio/items/numbers_ten_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "birds",
+   "title": "Birds",
+   "caption": "Birds",
+   "icon": "img/category/birds.webp",
+   "items": [
+    {
+     "id": "birds_peacock",
+     "name": "Peacock",
+     "letter": null,
+     "image": "img/items/birds_peacock.webp",
+     "caption": "img/captions/birds_peacock.webp",
+     "audioMale": "audio/items/birds_peacock_m.mp3",
+     "audioFemale": "audio/items/birds_peacock_f.mp3"
+    },
+    {
+     "id": "birds_black_kite",
+     "name": "Black kite",
+     "letter": null,
+     "image": "img/items/birds_black_kite.webp",
+     "caption": "img/captions/birds_black_kite.webp",
+     "audioMale": "audio/items/birds_black_kite_m.mp3",
+     "audioFemale": "audio/items/birds_black_kite_f.mp3"
+    },
+    {
+     "id": "birds_crow",
+     "name": "Crow",
+     "letter": null,
+     "image": "img/items/birds_crow.webp",
+     "caption": "img/captions/birds_crow.webp",
+     "audioMale": "audio/items/birds_crow_m.mp3",
+     "audioFemale": "audio/items/birds_crow_f.mp3"
+    },
+    {
+     "id": "birds_cuckoo",
+     "name": "Cuckoo",
+     "letter": null,
+     "image": "img/items/birds_cuckoo.webp",
+     "caption": "img/captions/birds_cuckoo.webp",
+     "audioMale": "audio/items/birds_cuckoo_m.mp3",
+     "audioFemale": "audio/items/birds_cuckoo_f.mp3"
+    },
+    {
+     "id": "birds_eagle",
+     "name": "Eagle",
+     "letter": null,
+     "image": "img/items/birds_eagle.webp",
+     "caption": "img/captions/birds_eagle.webp",
+     "audioMale": "audio/items/birds_eagle_m.mp3",
+     "audioFemale": "audio/items/birds_eagle_f.mp3"
+    },
+    {
+     "id": "birds_pigeon",
+     "name": "Pigeon",
+     "letter": null,
+     "image": "img/items/birds_pigeon.webp",
+     "caption": "img/captions/birds_pigeon.webp",
+     "audioMale": "audio/items/birds_pigeon_m.mp3",
+     "audioFemale": "audio/items/birds_pigeon_f.mp3"
+    },
+    {
+     "id": "birds_heron",
+     "name": "Heron",
+     "letter": null,
+     "image": "img/items/birds_heron.webp",
+     "caption": "img/captions/birds_heron.webp",
+     "audioMale": "audio/items/birds_heron_m.mp3",
+     "audioFemale": "audio/items/birds_heron_f.mp3"
+    },
+    {
+     "id": "birds_myna",
+     "name": "Myna",
+     "letter": null,
+     "image": "img/items/birds_myna.webp",
+     "caption": "img/captions/birds_myna.webp",
+     "audioMale": "audio/items/birds_myna_m.mp3",
+     "audioFemale": "audio/items/birds_myna_f.mp3"
+    },
+    {
+     "id": "birds_ostrich",
+     "name": "Ostrich",
+     "letter": null,
+     "image": "img/items/birds_ostrich.webp",
+     "caption": "img/captions/birds_ostrich.webp",
+     "audioMale": "audio/items/birds_ostrich_m.mp3",
+     "audioFemale": "audio/items/birds_ostrich_f.mp3"
+    },
+    {
+     "id": "birds_owl",
+     "name": "Owl",
+     "letter": null,
+     "image": "img/items/birds_owl.webp",
+     "caption": "img/captions/birds_owl.webp",
+     "audioMale": "audio/items/birds_owl_m.mp3",
+     "audioFemale": "audio/items/birds_owl_f.mp3"
+    },
+    {
+     "id": "birds_parrot",
+     "name": "Parrot",
+     "letter": null,
+     "image": "img/items/birds_parrot.webp",
+     "caption": "img/captions/birds_parrot.webp",
+     "audioMale": "audio/items/birds_parrot_m.mp3",
+     "audioFemale": "audio/items/birds_parrot_f.mp3"
+    },
+    {
+     "id": "birds_penguin",
+     "name": "Penguin",
+     "letter": null,
+     "image": "img/items/birds_penguin.webp",
+     "caption": "img/captions/birds_penguin.webp",
+     "audioMale": "audio/items/birds_penguin_m.mp3",
+     "audioFemale": "audio/items/birds_penguin_f.mp3"
+    },
+    {
+     "id": "birds_sparrow",
+     "name": "Sparrow",
+     "letter": null,
+     "image": "img/items/birds_sparrow.webp",
+     "caption": "img/captions/birds_sparrow.webp",
+     "audioMale": "audio/items/birds_sparrow_m.mp3",
+     "audioFemale": "audio/items/birds_sparrow_f.mp3"
+    },
+    {
+     "id": "birds_swan",
+     "name": "Swan",
+     "letter": null,
+     "image": "img/items/birds_swan.webp",
+     "caption": "img/captions/birds_swan.webp",
+     "audioMale": "audio/items/birds_swan_m.mp3",
+     "audioFemale": "audio/items/birds_swan_f.mp3"
+    },
+    {
+     "id": "birds_woodpecker",
+     "name": "Woodpecker",
+     "letter": null,
+     "image": "img/items/birds_woodpecker.webp",
+     "caption": "img/captions/birds_woodpecker.webp",
+     "audioMale": "audio/items/birds_woodpecker_m.mp3",
+     "audioFemale": "audio/items/birds_woodpecker_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "animals",
+   "title": "Animals",
+   "caption": "Animals",
+   "icon": "img/category/animals.webp",
+   "items": [
+    {
+     "id": "animals_bear",
+     "name": "Bear",
+     "letter": null,
+     "image": "img/items/animals_bear.webp",
+     "caption": "img/captions/animals_bear.webp",
+     "audioMale": "audio/items/animals_bear_m.mp3",
+     "audioFemale": "audio/items/animals_bear_f.mp3"
+    },
+    {
+     "id": "animals_buffalo",
+     "name": "Buffalo",
+     "letter": null,
+     "image": "img/items/animals_buffalo.webp",
+     "caption": "img/captions/animals_buffalo.webp",
+     "audioMale": "audio/items/animals_buffalo_m.mp3",
+     "audioFemale": "audio/items/animals_buffalo_f.mp3"
+    },
+    {
+     "id": "animals_camel",
+     "name": "Camel",
+     "letter": null,
+     "image": "img/items/animals_camel.webp",
+     "caption": "img/captions/animals_camel.webp",
+     "audioMale": "audio/items/animals_camel_m.mp3",
+     "audioFemale": "audio/items/animals_camel_f.mp3"
+    },
+    {
+     "id": "animals_cat",
+     "name": "Cat",
+     "letter": null,
+     "image": "img/items/animals_cat.webp",
+     "caption": "img/captions/animals_cat.webp",
+     "audioMale": "audio/items/animals_cat_m.mp3",
+     "audioFemale": "audio/items/animals_cat_f.mp3"
+    },
+    {
+     "id": "animals_cow",
+     "name": "Cow",
+     "letter": null,
+     "image": "img/items/animals_cow.webp",
+     "caption": "img/captions/animals_cow.webp",
+     "audioMale": "audio/items/animals_cow_m.mp3",
+     "audioFemale": "audio/items/animals_cow_f.mp3"
+    },
+    {
+     "id": "animals_dog",
+     "name": "Dog",
+     "letter": null,
+     "image": "img/items/animals_dog.webp",
+     "caption": "img/captions/animals_dog.webp",
+     "audioMale": "audio/items/animals_dog_m.mp3",
+     "audioFemale": "audio/items/animals_dog_f.mp3"
+    },
+    {
+     "id": "animals_donkey",
+     "name": "Donkey",
+     "letter": null,
+     "image": "img/items/animals_donkey.webp",
+     "caption": "img/captions/animals_donkey.webp",
+     "audioMale": "audio/items/animals_donkey_m.mp3",
+     "audioFemale": "audio/items/animals_donkey_f.mp3"
+    },
+    {
+     "id": "animals_elephant",
+     "name": "Elephant",
+     "letter": null,
+     "image": "img/items/animals_elephant.webp",
+     "caption": "img/captions/animals_elephant.webp",
+     "audioMale": "audio/items/animals_elephant_m.mp3",
+     "audioFemale": "audio/items/animals_elephant_f.mp3"
+    },
+    {
+     "id": "animals_goat",
+     "name": "Goat",
+     "letter": null,
+     "image": "img/items/animals_goat.webp",
+     "caption": "img/captions/animals_goat.webp",
+     "audioMale": "audio/items/animals_goat_m.mp3",
+     "audioFemale": "audio/items/animals_goat_f.mp3"
+    },
+    {
+     "id": "animals_horse",
+     "name": "Horse",
+     "letter": null,
+     "image": "img/items/animals_horse.webp",
+     "caption": "img/captions/animals_horse.webp",
+     "audioMale": "audio/items/animals_horse_m.mp3",
+     "audioFemale": "audio/items/animals_horse_f.mp3"
+    },
+    {
+     "id": "animals_lion",
+     "name": "Lion",
+     "letter": null,
+     "image": "img/items/animals_lion.webp",
+     "caption": "img/captions/animals_lion.webp",
+     "audioMale": "audio/items/animals_lion_m.mp3",
+     "audioFemale": "audio/items/animals_lion_f.mp3"
+    },
+    {
+     "id": "animals_monkey",
+     "name": "Monkey",
+     "letter": null,
+     "image": "img/items/animals_monkey.webp",
+     "caption": "img/captions/animals_monkey.webp",
+     "audioMale": "audio/items/animals_monkey_m.mp3",
+     "audioFemale": "audio/items/animals_monkey_f.mp3"
+    },
+    {
+     "id": "animals_sheep",
+     "name": "Sheep",
+     "letter": null,
+     "image": "img/items/animals_sheep.webp",
+     "caption": "img/captions/animals_sheep.webp",
+     "audioMale": "audio/items/animals_sheep_m.mp3",
+     "audioFemale": "audio/items/animals_sheep_f.mp3"
+    },
+    {
+     "id": "animals_tiger",
+     "name": "Tiger",
+     "letter": null,
+     "image": "img/items/animals_tiger.webp",
+     "caption": "img/captions/animals_tiger.webp",
+     "audioMale": "audio/items/animals_tiger_m.mp3",
+     "audioFemale": "audio/items/animals_tiger_f.mp3"
+    },
+    {
+     "id": "animals_zebra",
+     "name": "Zebra",
+     "letter": null,
+     "image": "img/items/animals_zebra.webp",
+     "caption": "img/captions/animals_zebra.webp",
+     "audioMale": "audio/items/animals_zebra_m.mp3",
+     "audioFemale": "audio/items/animals_zebra_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "fruits",
+   "title": "Fruits",
+   "caption": "Fruits",
+   "icon": "img/category/fruits.webp",
+   "items": [
+    {
+     "id": "fruits_apple",
+     "name": "Apple",
+     "letter": null,
+     "image": "img/items/fruits_apple.webp",
+     "caption": "img/captions/fruits_apple.webp",
+     "audioMale": "audio/items/fruits_apple_m.mp3",
+     "audioFemale": "audio/items/fruits_apple_f.mp3"
+    },
+    {
+     "id": "fruits_banana",
+     "name": "Banana",
+     "letter": null,
+     "image": "img/items/fruits_banana.webp",
+     "caption": "img/captions/fruits_banana.webp",
+     "audioMale": "audio/items/fruits_banana_m.mp3",
+     "audioFemale": "audio/items/fruits_banana_f.mp3"
+    },
+    {
+     "id": "fruits_cherry",
+     "name": "Cherry",
+     "letter": null,
+     "image": "img/items/fruits_cherry.webp",
+     "caption": "img/captions/fruits_cherry.webp",
+     "audioMale": "audio/items/fruits_cherry_m.mp3",
+     "audioFemale": "audio/items/fruits_cherry_f.mp3"
+    },
+    {
+     "id": "fruits_custard_apple",
+     "name": "Custard Apple",
+     "letter": null,
+     "image": "img/items/fruits_custard_apple.webp",
+     "caption": "img/captions/fruits_custard_apple.webp",
+     "audioMale": "audio/items/fruits_custard_apple_m.mp3",
+     "audioFemale": "audio/items/fruits_custard_apple_f.mp3"
+    },
+    {
+     "id": "fruits_grapes",
+     "name": "Grapes",
+     "letter": null,
+     "image": "img/items/fruits_grapes.webp",
+     "caption": "img/captions/fruits_grapes.webp",
+     "audioMale": "audio/items/fruits_grapes_m.mp3",
+     "audioFemale": "audio/items/fruits_grapes_f.mp3"
+    },
+    {
+     "id": "fruits_guava",
+     "name": "Guava",
+     "letter": null,
+     "image": "img/items/fruits_guava.webp",
+     "caption": "img/captions/fruits_guava.webp",
+     "audioMale": "audio/items/fruits_guava_m.mp3",
+     "audioFemale": "audio/items/fruits_guava_f.mp3"
+    },
+    {
+     "id": "fruits_mango",
+     "name": "Mango",
+     "letter": null,
+     "image": "img/items/fruits_mango.webp",
+     "caption": "img/captions/fruits_mango.webp",
+     "audioMale": "audio/items/fruits_mango_m.mp3",
+     "audioFemale": "audio/items/fruits_mango_f.mp3"
+    },
+    {
+     "id": "fruits_muskmelon",
+     "name": "Muskmelon",
+     "letter": null,
+     "image": "img/items/fruits_muskmelon.webp",
+     "caption": "img/captions/fruits_muskmelon.webp",
+     "audioMale": "audio/items/fruits_muskmelon_m.mp3",
+     "audioFemale": "audio/items/fruits_muskmelon_f.mp3"
+    },
+    {
+     "id": "fruits_orange",
+     "name": "Orange",
+     "letter": null,
+     "image": "img/items/fruits_orange.webp",
+     "caption": "img/captions/fruits_orange.webp",
+     "audioMale": "audio/items/fruits_orange_m.mp3",
+     "audioFemale": "audio/items/fruits_orange_f.mp3"
+    },
+    {
+     "id": "fruits_papaya",
+     "name": "Papaya",
+     "letter": null,
+     "image": "img/items/fruits_papaya.webp",
+     "caption": "img/captions/fruits_papaya.webp",
+     "audioMale": "audio/items/fruits_papaya_m.mp3",
+     "audioFemale": "audio/items/fruits_papaya_f.mp3"
+    },
+    {
+     "id": "fruits_pineapple",
+     "name": "Pineapple",
+     "letter": null,
+     "image": "img/items/fruits_pineapple.webp",
+     "caption": "img/captions/fruits_pineapple.webp",
+     "audioMale": "audio/items/fruits_pineapple_m.mp3",
+     "audioFemale": "audio/items/fruits_pineapple_f.mp3"
+    },
+    {
+     "id": "fruits_pomegranate",
+     "name": "Pomegranate",
+     "letter": null,
+     "image": "img/items/fruits_pomegranate.webp",
+     "caption": "img/captions/fruits_pomegranate.webp",
+     "audioMale": "audio/items/fruits_pomegranate_m.mp3",
+     "audioFemale": "audio/items/fruits_pomegranate_f.mp3"
+    },
+    {
+     "id": "fruits_sapodilla",
+     "name": "Sapodilla",
+     "letter": null,
+     "image": "img/items/fruits_sapodilla.webp",
+     "caption": "img/captions/fruits_sapodilla.webp",
+     "audioMale": "audio/items/fruits_sapodilla_m.mp3",
+     "audioFemale": "audio/items/fruits_sapodilla_f.mp3"
+    },
+    {
+     "id": "fruits_strawberry",
+     "name": "Strawberry",
+     "letter": null,
+     "image": "img/items/fruits_strawberry.webp",
+     "caption": "img/captions/fruits_strawberry.webp",
+     "audioMale": "audio/items/fruits_strawberry_m.mp3",
+     "audioFemale": "audio/items/fruits_strawberry_f.mp3"
+    },
+    {
+     "id": "fruits_watermelon",
+     "name": "Watermelon",
+     "letter": null,
+     "image": "img/items/fruits_watermelon.webp",
+     "caption": "img/captions/fruits_watermelon.webp",
+     "audioMale": "audio/items/fruits_watermelon_m.mp3",
+     "audioFemale": "audio/items/fruits_watermelon_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "colors",
+   "title": "Colors",
+   "caption": "Colors",
+   "icon": "img/category/colors.webp",
+   "items": [
+    {
+     "id": "colors_black",
+     "name": "Black",
+     "letter": null,
+     "image": "img/items/colors_black.webp",
+     "caption": "img/captions/colors_black.webp",
+     "audioMale": "audio/items/colors_black_m.mp3",
+     "audioFemale": "audio/items/colors_black_f.mp3"
+    },
+    {
+     "id": "colors_blue",
+     "name": "Blue",
+     "letter": null,
+     "image": "img/items/colors_blue.webp",
+     "caption": "img/captions/colors_blue.webp",
+     "audioMale": "audio/items/colors_blue_m.mp3",
+     "audioFemale": "audio/items/colors_blue_f.mp3"
+    },
+    {
+     "id": "colors_green",
+     "name": "Green",
+     "letter": null,
+     "image": "img/items/colors_green.webp",
+     "caption": "img/captions/colors_green.webp",
+     "audioMale": "audio/items/colors_green_m.mp3",
+     "audioFemale": "audio/items/colors_green_f.mp3"
+    },
+    {
+     "id": "colors_grey",
+     "name": "Grey",
+     "letter": null,
+     "image": "img/items/colors_grey.webp",
+     "caption": "img/captions/colors_grey.webp",
+     "audioMale": "audio/items/colors_grey_m.mp3",
+     "audioFemale": "audio/items/colors_grey_f.mp3"
+    },
+    {
+     "id": "colors_beige",
+     "name": "Beige",
+     "letter": null,
+     "image": "img/items/colors_beige.webp",
+     "caption": "img/captions/colors_beige.webp",
+     "audioMale": "audio/items/colors_beige_m.mp3",
+     "audioFemale": "audio/items/colors_beige_f.mp3"
+    },
+    {
+     "id": "colors_indigo",
+     "name": "Indigo",
+     "letter": null,
+     "image": "img/items/colors_indigo.webp",
+     "caption": "img/captions/colors_indigo.webp",
+     "audioMale": "audio/items/colors_indigo_m.mp3",
+     "audioFemale": "audio/items/colors_indigo_f.mp3"
+    },
+    {
+     "id": "colors_orange",
+     "name": "Orange",
+     "letter": null,
+     "image": "img/items/colors_orange.webp",
+     "caption": "img/captions/colors_orange.webp",
+     "audioMale": "audio/items/colors_orange_m.mp3",
+     "audioFemale": "audio/items/colors_orange_f.mp3"
+    },
+    {
+     "id": "colors_pink",
+     "name": "Pink",
+     "letter": null,
+     "image": "img/items/colors_pink.webp",
+     "caption": "img/captions/colors_pink.webp",
+     "audioMale": "audio/items/colors_pink_m.mp3",
+     "audioFemale": "audio/items/colors_pink_f.mp3"
+    },
+    {
+     "id": "colors_purple",
+     "name": "Purple",
+     "letter": null,
+     "image": "img/items/colors_purple.webp",
+     "caption": "img/captions/colors_purple.webp",
+     "audioMale": "audio/items/colors_purple_m.mp3",
+     "audioFemale": "audio/items/colors_purple_f.mp3"
+    },
+    {
+     "id": "colors_red",
+     "name": "Red",
+     "letter": null,
+     "image": "img/items/colors_red.webp",
+     "caption": "img/captions/colors_red.webp",
+     "audioMale": "audio/items/colors_red_m.mp3",
+     "audioFemale": "audio/items/colors_red_f.mp3"
+    },
+    {
+     "id": "colors_silver",
+     "name": "Silver",
+     "letter": null,
+     "image": "img/items/colors_silver.webp",
+     "caption": "img/captions/colors_silver.webp",
+     "audioMale": "audio/items/colors_silver_m.mp3",
+     "audioFemale": "audio/items/colors_silver_f.mp3"
+    },
+    {
+     "id": "colors_violet",
+     "name": "Violet",
+     "letter": null,
+     "image": "img/items/colors_violet.webp",
+     "caption": "img/captions/colors_violet.webp",
+     "audioMale": "audio/items/colors_violet_m.mp3",
+     "audioFemale": "audio/items/colors_violet_f.mp3"
+    },
+    {
+     "id": "colors_white",
+     "name": "White",
+     "letter": null,
+     "image": "img/items/colors_white.webp",
+     "caption": "img/captions/colors_white.webp",
+     "audioMale": "audio/items/colors_white_m.mp3",
+     "audioFemale": "audio/items/colors_white_f.mp3"
+    },
+    {
+     "id": "colors_yellow",
+     "name": "Yellow",
+     "letter": null,
+     "image": "img/items/colors_yellow.webp",
+     "caption": "img/captions/colors_yellow.webp",
+     "audioMale": "audio/items/colors_yellow_m.mp3",
+     "audioFemale": "audio/items/colors_yellow_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "shapes",
+   "title": "Shapes",
+   "caption": "Shapes & Lines",
+   "icon": "img/category/shapes.webp",
+   "items": [
+    {
+     "id": "shapes_arrow",
+     "name": "Arrow",
+     "letter": null,
+     "image": "img/items/shapes_arrow.webp",
+     "caption": "img/captions/shapes_arrow.webp",
+     "audioMale": "audio/items/shapes_arrow_m.mp3",
+     "audioFemale": "audio/items/shapes_arrow_f.mp3"
+    },
+    {
+     "id": "shapes_circle",
+     "name": "Circle",
+     "letter": null,
+     "image": "img/items/shapes_circle.webp",
+     "caption": "img/captions/shapes_circle.webp",
+     "audioMale": "audio/items/shapes_circle_m.mp3",
+     "audioFemale": "audio/items/shapes_circle_f.mp3"
+    },
+    {
+     "id": "shapes_cross",
+     "name": "Cross",
+     "letter": null,
+     "image": "img/items/shapes_cross.webp",
+     "caption": "img/captions/shapes_cross.webp",
+     "audioMale": "audio/items/shapes_cross_m.mp3",
+     "audioFemale": "audio/items/shapes_cross_f.mp3"
+    },
+    {
+     "id": "shapes_hexagon",
+     "name": "Hexagon",
+     "letter": null,
+     "image": "img/items/shapes_hexagon.webp",
+     "caption": "img/captions/shapes_hexagon.webp",
+     "audioMale": "audio/items/shapes_hexagon_m.mp3",
+     "audioFemale": "audio/items/shapes_hexagon_f.mp3"
+    },
+    {
+     "id": "shapes_moon",
+     "name": "Moon",
+     "letter": null,
+     "image": "img/items/shapes_moon.webp",
+     "caption": "img/captions/shapes_moon.webp",
+     "audioMale": "audio/items/shapes_moon_m.mp3",
+     "audioFemale": "audio/items/shapes_moon_f.mp3"
+    },
+    {
+     "id": "shapes_octagon",
+     "name": "Octagon",
+     "letter": null,
+     "image": "img/items/shapes_octagon.webp",
+     "caption": "img/captions/shapes_octagon.webp",
+     "audioMale": "audio/items/shapes_octagon_m.mp3",
+     "audioFemale": "audio/items/shapes_octagon_f.mp3"
+    },
+    {
+     "id": "shapes_pentagon",
+     "name": "Pentagon",
+     "letter": null,
+     "image": "img/items/shapes_pentagon.webp",
+     "caption": "img/captions/shapes_pentagon.webp",
+     "audioMale": "audio/items/shapes_pentagon_m.mp3",
+     "audioFemale": "audio/items/shapes_pentagon_f.mp3"
+    },
+    {
+     "id": "shapes_rectangle",
+     "name": "Rectangle",
+     "letter": null,
+     "image": "img/items/shapes_rectangle.webp",
+     "caption": "img/captions/shapes_rectangle.webp",
+     "audioMale": "audio/items/shapes_rectangle_m.mp3",
+     "audioFemale": "audio/items/shapes_rectangle_f.mp3"
+    },
+    {
+     "id": "shapes_square",
+     "name": "Square",
+     "letter": null,
+     "image": "img/items/shapes_square.webp",
+     "caption": "img/captions/shapes_square.webp",
+     "audioMale": "audio/items/shapes_square_m.mp3",
+     "audioFemale": "audio/items/shapes_square_f.mp3"
+    },
+    {
+     "id": "shapes_star",
+     "name": "Star",
+     "letter": null,
+     "image": "img/items/shapes_star.webp",
+     "caption": "img/captions/shapes_star.webp",
+     "audioMale": "audio/items/shapes_star_m.mp3",
+     "audioFemale": "audio/items/shapes_star_f.mp3"
+    },
+    {
+     "id": "shapes_trapezoid",
+     "name": "Trapezoid",
+     "letter": null,
+     "image": "img/items/shapes_trapezoid.webp",
+     "caption": "img/captions/shapes_trapezoid.webp",
+     "audioMale": "audio/items/shapes_trapezoid_m.mp3",
+     "audioFemale": "audio/items/shapes_trapezoid_f.mp3"
+    },
+    {
+     "id": "shapes_triangle",
+     "name": "Triangle",
+     "letter": null,
+     "image": "img/items/shapes_triangle.webp",
+     "caption": "img/captions/shapes_triangle.webp",
+     "audioMale": "audio/items/shapes_triangle_m.mp3",
+     "audioFemale": "audio/items/shapes_triangle_f.mp3"
+    },
+    {
+     "id": "shapes_standing_line",
+     "name": "Standing Line",
+     "letter": null,
+     "image": "img/items/shapes_standing_line.webp",
+     "caption": "img/captions/shapes_standing_line.webp",
+     "audioMale": "audio/items/shapes_standing_line_m.mp3",
+     "audioFemale": "audio/items/shapes_standing_line_f.mp3"
+    },
+    {
+     "id": "shapes_sleeping_line",
+     "name": "Sleeping Line",
+     "letter": null,
+     "image": "img/items/shapes_sleeping_line.webp",
+     "caption": "img/captions/shapes_sleeping_line.webp",
+     "audioMale": "audio/items/shapes_sleeping_line_m.mp3",
+     "audioFemale": "audio/items/shapes_sleeping_line_f.mp3"
+    },
+    {
+     "id": "shapes_slanting_line",
+     "name": "Slanting Line",
+     "letter": null,
+     "image": "img/items/shapes_slanting_line.webp",
+     "caption": "img/captions/shapes_slanting_line.webp",
+     "audioMale": "audio/items/shapes_slanting_line_m.mp3",
+     "audioFemale": "audio/items/shapes_slanting_line_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "vehicles",
+   "title": "Vehicles",
+   "caption": "Vehicles",
+   "icon": "img/category/vehicles.webp",
+   "items": [
+    {
+     "id": "vehicles_aeroplane",
+     "name": "Aeroplane",
+     "letter": null,
+     "image": "img/items/vehicles_aeroplane.webp",
+     "caption": "img/captions/vehicles_aeroplane.webp",
+     "audioMale": "audio/items/vehicles_aeroplane_m.mp3",
+     "audioFemale": "audio/items/vehicles_aeroplane_f.mp3"
+    },
+    {
+     "id": "vehicles_ambulance",
+     "name": "Ambulance",
+     "letter": null,
+     "image": "img/items/vehicles_ambulance.webp",
+     "caption": "img/captions/vehicles_ambulance.webp",
+     "audioMale": "audio/items/vehicles_ambulance_m.mp3",
+     "audioFemale": "audio/items/vehicles_ambulance_f.mp3"
+    },
+    {
+     "id": "vehicles_bus",
+     "name": "Bus",
+     "letter": null,
+     "image": "img/items/vehicles_bus.webp",
+     "caption": "img/captions/vehicles_bus.webp",
+     "audioMale": "audio/items/vehicles_bus_m.mp3",
+     "audioFemale": "audio/items/vehicles_bus_f.mp3"
+    },
+    {
+     "id": "vehicles_bicycle",
+     "name": "Bicycle",
+     "letter": null,
+     "image": "img/items/vehicles_bicycle.webp",
+     "caption": "img/captions/vehicles_bicycle.webp",
+     "audioMale": "audio/items/vehicles_bicycle_m.mp3",
+     "audioFemale": "audio/items/vehicles_bicycle_f.mp3"
+    },
+    {
+     "id": "vehicles_boat",
+     "name": "Boat",
+     "letter": null,
+     "image": "img/items/vehicles_boat.webp",
+     "caption": "img/captions/vehicles_boat.webp",
+     "audioMale": "audio/items/vehicles_boat_m.mp3",
+     "audioFemale": "audio/items/vehicles_boat_f.mp3"
+    },
+    {
+     "id": "vehicles_car",
+     "name": "Car",
+     "letter": null,
+     "image": "img/items/vehicles_car.webp",
+     "caption": "img/captions/vehicles_car.webp",
+     "audioMale": "audio/items/vehicles_car_m.mp3",
+     "audioFemale": "audio/items/vehicles_car_f.mp3"
+    },
+    {
+     "id": "vehicles_helicopter",
+     "name": "Helicopter",
+     "letter": null,
+     "image": "img/items/vehicles_helicopter.webp",
+     "caption": "img/captions/vehicles_helicopter.webp",
+     "audioMale": "audio/items/vehicles_helicopter_m.mp3",
+     "audioFemale": "audio/items/vehicles_helicopter_f.mp3"
+    },
+    {
+     "id": "vehicles_jcb",
+     "name": "JCB",
+     "letter": null,
+     "image": "img/items/vehicles_jcb.webp",
+     "caption": "img/captions/vehicles_jcb.webp",
+     "audioMale": "audio/items/vehicles_jcb_m.mp3",
+     "audioFemale": "audio/items/vehicles_jcb_f.mp3"
+    },
+    {
+     "id": "vehicles_jeep",
+     "name": "Jeep",
+     "letter": null,
+     "image": "img/items/vehicles_jeep.webp",
+     "caption": "img/captions/vehicles_jeep.webp",
+     "audioMale": "audio/items/vehicles_jeep_m.mp3",
+     "audioFemale": "audio/items/vehicles_jeep_f.mp3"
+    },
+    {
+     "id": "vehicles_motorcycle",
+     "name": "Motorcycle",
+     "letter": null,
+     "image": "img/items/vehicles_motorcycle.webp",
+     "caption": "img/captions/vehicles_motorcycle.webp",
+     "audioMale": "audio/items/vehicles_motorcycle_m.mp3",
+     "audioFemale": "audio/items/vehicles_motorcycle_f.mp3"
+    },
+    {
+     "id": "vehicles_scooter",
+     "name": "Scooter",
+     "letter": null,
+     "image": "img/items/vehicles_scooter.webp",
+     "caption": "img/captions/vehicles_scooter.webp",
+     "audioMale": "audio/items/vehicles_scooter_m.mp3",
+     "audioFemale": "audio/items/vehicles_scooter_f.mp3"
+    },
+    {
+     "id": "vehicles_ship",
+     "name": "Ship",
+     "letter": null,
+     "image": "img/items/vehicles_ship.webp",
+     "caption": "img/captions/vehicles_ship.webp",
+     "audioMale": "audio/items/vehicles_ship_m.mp3",
+     "audioFemale": "audio/items/vehicles_ship_f.mp3"
+    },
+    {
+     "id": "vehicles_tractor",
+     "name": "Tractor",
+     "letter": null,
+     "image": "img/items/vehicles_tractor.webp",
+     "caption": "img/captions/vehicles_tractor.webp",
+     "audioMale": "audio/items/vehicles_tractor_m.mp3",
+     "audioFemale": "audio/items/vehicles_tractor_f.mp3"
+    },
+    {
+     "id": "vehicles_train",
+     "name": "Train",
+     "letter": null,
+     "image": "img/items/vehicles_train.webp",
+     "caption": "img/captions/vehicles_train.webp",
+     "audioMale": "audio/items/vehicles_train_m.mp3",
+     "audioFemale": "audio/items/vehicles_train_f.mp3"
+    },
+    {
+     "id": "vehicles_truck",
+     "name": "Truck",
+     "letter": null,
+     "image": "img/items/vehicles_truck.webp",
+     "caption": "img/captions/vehicles_truck.webp",
+     "audioMale": "audio/items/vehicles_truck_m.mp3",
+     "audioFemale": "audio/items/vehicles_truck_f.mp3"
+    }
+   ]
+  }
+ ],
+ "rhymes": [
+  {
+   "id": "rhyme_1",
+   "title": "Johny Johny Yes Papa",
+   "image": "img/rhymes/rhyme_1.webp",
+   "audio": "audio/rhymes/rhyme_1.mp3"
+  },
+  {
+   "id": "rhyme_2",
+   "title": "Twinkle Twinkle little star",
+   "image": "img/rhymes/rhyme_2.webp",
+   "audio": "audio/rhymes/rhyme_2.mp3"
+  },
+  {
+   "id": "rhyme_3",
+   "title": "Rain Rain Go Away",
+   "image": "img/rhymes/rhyme_3.webp",
+   "audio": "audio/rhymes/rhyme_3.mp3"
+  },
+  {
+   "id": "rhyme_4",
+   "title": "Baa Baa Black Sheep",
+   "image": "img/rhymes/rhyme_4.webp",
+   "audio": "audio/rhymes/rhyme_4.mp3"
+  },
+  {
+   "id": "rhyme_5",
+   "title": "Machli Jal Ki Rani hai",
+   "image": "img/rhymes/rhyme_5.webp",
+   "audio": "audio/rhymes/rhyme_5.mp3"
+  },
+  {
+   "id": "rhyme_6",
+   "title": "Hatti Raja Kahan Chale",
+   "image": "img/rhymes/rhyme_6.webp",
+   "audio": "audio/rhymes/rhyme_6.mp3"
+  },
+  {
+   "id": "rhyme_7",
+   "title": "Chidiya Rani Badi Sayani",
+   "image": "img/rhymes/rhyme_7.webp",
+   "audio": "audio/rhymes/rhyme_7.mp3"
+  },
+  {
+   "id": "rhyme_8",
+   "title": "Indian National Anthem",
+   "image": "img/rhymes/rhyme_8.webp",
+   "audio": "audio/rhymes/rhyme_8.mp3"
+  }
+ ]
+}

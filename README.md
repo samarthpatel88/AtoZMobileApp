@@ -1,2 +1,0 @@
-# AtoZMobileApp
-AtoZ Mobile Application
