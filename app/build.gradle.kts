@@ -6,14 +6,14 @@ plugins {
 
 android {
     namespace = "com.atozkids.learn"
-    compileSdk = 35
+    compileSdk = 36
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
-        applicationId = "com.atozkids.learn"
+        applicationId = "com.atozkids"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 1
+        targetSdk = 36
+        versionCode = 10
         versionName = "2.0.0"
         resourceConfigurations += listOf("en")
     }
@@ -26,10 +26,20 @@ android {
             keyAlias = "androiddebugkey"
             keyPassword = "android"
         }
+        // The Play key lives in CI secrets only; without them the release build is left unsigned.
+        System.getenv("RELEASE_KEYSTORE_FILE")?.let { keystore ->
+            create("release") {
+                storeFile = file(keystore)
+                storePassword = System.getenv("RELEASE_STORE_PASSWORD")
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
