@@ -5,7 +5,7 @@ import com.atozkids.learn.data.Item
 import kotlin.random.Random
 
 enum class QuestionType {
-    /** A word is spoken; tap the matching picture. */
+    /** A word is shown; tap the matching picture. */
     PICK_PICTURE,
 
     /** A picture is shown; tap its name. */
@@ -15,7 +15,7 @@ enum class QuestionType {
     PICK_LETTER,
 }
 
-class Question(val type: QuestionType, val target: Item, val options: List<Item>)
+class Question(val type: QuestionType, val target: Item, val options: List<Item>, val prompt: String)
 
 /** Builds quizzes from a category's local items; nothing is stored or fetched. */
 object QuizEngine {
@@ -31,7 +31,22 @@ object QuizEngine {
                 category.isAlphabet -> QuestionType.PICK_LETTER
                 else -> QuestionType.PICK_NAME
             }
-            Question(type, target, (others + target).shuffled(random))
+            Question(type, target, (others + target).shuffled(random), prompt(type, target, category))
+        }
+    }
+
+    private fun prompt(type: QuestionType, target: Item, category: Category) = when (type) {
+        QuestionType.PICK_LETTER -> "Which letter does ${target.name} start with?"
+        QuestionType.PICK_PICTURE -> when (category.id) {
+            "colors" -> "Find the colour ${target.name}"
+            "numbers" -> "Find the number ${target.name}"
+            else -> "Find the ${target.name}"
+        }
+        QuestionType.PICK_NAME -> when (category.id) {
+            "colors" -> "What colour is this?"
+            "numbers" -> "What number is this?"
+            "shapes" -> "What shape is this?"
+            else -> "What is this?"
         }
     }
 

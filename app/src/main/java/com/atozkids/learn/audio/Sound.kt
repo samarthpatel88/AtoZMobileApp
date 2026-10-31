@@ -26,9 +26,17 @@ class Sound(private val context: Context, private val prefs: Prefs) {
     private var rhyme: MediaPlayer? = null
     private var music: MediaPlayer? = null
     private var inForeground = false
+    private var silent = false
+
+    /** The quiz is played in silence: no effects, no voice, no music. */
+    fun silence(on: Boolean) {
+        silent = on
+        if (on) stopVoice()
+        syncMusic()
+    }
 
     fun sfx(name: String) {
-        if (!prefs.sfx) return
+        if (!prefs.sfx || silent) return
         effects[name]?.let { pool.play(it, 1f, 1f, 1, 0, 1f) }
     }
 
@@ -46,10 +54,10 @@ class Sound(private val context: Context, private val prefs: Prefs) {
 
     // --- rhymes: need position and seeking, and they pause the background music ---
 
-    fun playRhyme(assetPath: String, onDone: () -> Unit) {
+    fun playRhyme(assetPath: String) {
         stopRhyme()
         stopVoice()
-        rhyme = player(assetPath, loop = false, onDone = { onDone() })
+        rhyme = player(assetPath, loop = false, onDone = {})
         music?.pause()
         rhyme?.start()
     }
@@ -72,7 +80,7 @@ class Sound(private val context: Context, private val prefs: Prefs) {
 
     /** Start, pause or resume the music so it matches the setting and the app state. */
     fun syncMusic() {
-        val shouldPlay = prefs.music && inForeground && rhyme == null
+        val shouldPlay = prefs.music && inForeground && rhyme == null && !silent
         if (shouldPlay) {
             if (music == null) {
                 music = player("audio/sfx/music.mp3", loop = true, onDone = {})?.apply { setVolume(0.28f, 0.28f) }

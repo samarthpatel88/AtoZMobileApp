@@ -31,10 +31,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -43,6 +47,8 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
@@ -51,14 +57,18 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.atozkids.learn.LocalGraph
+import com.atozkids.learn.R
 import kotlin.math.sin
 import kotlin.random.Random
 import kotlinx.coroutines.Dispatchers
@@ -118,23 +128,34 @@ fun Bouncy(
 
 @Composable
 fun RoundButton(
-    label: String,
+    icon: ImageVector,
     color: Color,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    size: Dp = 56.dp,
+    size: Dp = 44.dp,
     enabled: Boolean = true,
 ) {
     Bouncy(onClick, modifier.size(size), enabled) {
         Box(
             Modifier
                 .fillMaxSize()
-                .background(if (enabled) color else Color(0xFFCFCFCF), CircleShape),
+                .background(if (enabled) color else Color(0xFFDADCE4), CircleShape),
             contentAlignment = Alignment.Center,
         ) {
-            Text(label, color = Color.White, fontSize = (size.value * 0.46f).sp, fontWeight = FontWeight.ExtraBold)
+            Icon(icon, contentDescription = null, Modifier.size(size * 0.58f), tint = Color.White)
         }
     }
+}
+
+val PauseIcon @Composable get() = ImageVector.vectorResource(R.drawable.ic_pause)
+val VolumeIcon @Composable get() = ImageVector.vectorResource(R.drawable.ic_volume)
+
+/** The white rounded card used across the app. */
+fun Modifier.kidCard(radius: Dp = 22.dp, color: Color = Color.White): Modifier {
+    val shape = RoundedCornerShape(radius)
+    return shadow(3.dp, shape, ambientColor = Ink.copy(alpha = 0.25f), spotColor = Ink.copy(alpha = 0.25f))
+        .clip(shape)
+        .background(color)
 }
 
 /** Common page frame: tinted gradient, safe-area padding, optional back button and title. */
@@ -149,20 +170,23 @@ fun KidScreen(
     Column(
         Modifier
             .fillMaxSize()
-            .background(Brush.verticalGradient(listOf(color.copy(alpha = 0.40f), Cream)))
+            .background(Brush.verticalGradient(0f to color.copy(alpha = 0.22f), 0.45f to Cream))
             .windowInsetsPadding(WindowInsets.safeDrawing),
     ) {
-        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
-            if (onBack != null) {
-                RoundButton("←", color, onBack)
-                Spacer(Modifier.width(14.dp))
-            }
+        Row(
+            Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            if (onBack != null) RoundButton(Icons.AutoMirrored.Filled.ArrowBack, color, onBack)
             Text(
                 title,
                 Modifier.weight(1f),
-                style = androidx.compose.material3.MaterialTheme.typography.headlineMedium,
+                style = androidx.compose.material3.MaterialTheme.typography.titleLarge,
+                fontSize = 24.sp,
                 color = Ink,
                 maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
             )
             actions()
         }
@@ -172,8 +196,58 @@ fun KidScreen(
 
 @Composable
 fun StarsChip(count: Int, modifier: Modifier = Modifier) {
-    Box(modifier.background(Color.White, CircleShape).padding(horizontal = 14.dp, vertical = 6.dp)) {
-        Text("⭐ $count", fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = Ink)
+    Row(
+        modifier.background(Color.White, CircleShape).padding(horizontal = 12.dp, vertical = 5.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Icon(Icons.Filled.Star, contentDescription = null, Modifier.size(20.dp), tint = Sun)
+        Text("$count", fontSize = 17.sp, fontWeight = FontWeight.ExtraBold, color = Ink)
+    }
+}
+
+/** A row of [total] stars, the first [filled] of them gold. */
+@Composable
+fun StarRow(filled: Int, modifier: Modifier = Modifier, total: Int = 3, size: Dp = 16.dp) {
+    Row(modifier) {
+        repeat(total) { i ->
+            Icon(Icons.Filled.Star, contentDescription = null, Modifier.size(size), tint = if (i < filled) Sun else Color(0xFFE4E5EC))
+        }
+    }
+}
+
+/** Pill-shaped text button. */
+@Composable
+fun BigButton(text: String, color: Color, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Bouncy(onClick, modifier) {
+        Text(
+            text,
+            Modifier.background(color, CircleShape).padding(horizontal = 24.dp, vertical = 9.dp),
+            color = Color.White, fontSize = 19.sp, fontWeight = FontWeight.ExtraBold,
+        )
+    }
+}
+
+/** End-of-game panel with stars, used by the quiz and the memory game. */
+@Composable
+fun ResultPanel(title: String, detail: String, stars: Int, color: Color, onAgain: () -> Unit, onDone: () -> Unit) {
+    Box(Modifier.fillMaxSize()) {
+        Column(
+            Modifier.fillMaxSize().padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+        ) {
+            StarRow(stars, size = 60.dp)
+            Spacer(Modifier.size(6.dp))
+            Text(title, fontSize = 34.sp, fontWeight = FontWeight.ExtraBold, color = color)
+            Text(detail, fontSize = 18.sp, color = Ink, textAlign = TextAlign.Center)
+            Spacer(Modifier.size(18.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                BigButton("Play again", color, onAgain)
+                BigButton("Done", Grape, onDone)
+            }
+        }
+        if (stars >= 2) Confetti()
     }
 }
 
@@ -243,5 +317,5 @@ fun ParentGate(onDismiss: () -> Unit, onPass: () -> Unit) {
 
 @Composable
 fun Heading(text: String, modifier: Modifier = Modifier) {
-    Text(text, modifier, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = Ink, textAlign = TextAlign.Start)
+    Text(text, modifier, fontSize = 19.sp, fontWeight = FontWeight.ExtraBold, color = Ink, textAlign = TextAlign.Start)
 }

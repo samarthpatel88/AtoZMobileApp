@@ -49,8 +49,8 @@ fun SettingsScreen(onBack: () -> Unit, onPrivacy: () -> Unit) {
 
     KidScreen("Settings", Grape, onBack) {
         Column(
-            Modifier.verticalScroll(rememberScrollState()).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
+            Modifier.verticalScroll(rememberScrollState()).padding(horizontal = 14.dp, vertical = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Panel {
                 SwitchRow("🔔  Sound effects", prefs.sfx) { prefs.updateSfx(it) }
@@ -75,7 +75,7 @@ fun SettingsScreen(onBack: () -> Unit, onPrivacy: () -> Unit) {
                 LinkRow("✉️  Contact us") { gated = Gated.Contact }
                 LinkRow("🔒  Privacy policy", onPrivacy)
             }
-            Text("AtoZ Kids  v$version", Modifier.fillMaxWidth(), textAlign = TextAlign.Center, color = Color.Gray)
+            Text("AtoZ Kids  v$version", Modifier.fillMaxWidth(), textAlign = TextAlign.Center, color = Muted)
         }
     }
 
@@ -104,7 +104,7 @@ fun SettingsScreen(onBack: () -> Unit, onPrivacy: () -> Unit) {
 @Composable
 private fun Panel(content: @Composable ColumnScope.() -> Unit) {
     Column(
-        Modifier.fillMaxWidth().background(Color.White, RoundedCornerShape(24.dp)).padding(18.dp),
+        Modifier.fillMaxWidth().background(Color.White, RoundedCornerShape(22.dp)).padding(horizontal = 16.dp, vertical = 10.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
         content = content,
     )
@@ -113,7 +113,7 @@ private fun Panel(content: @Composable ColumnScope.() -> Unit) {
 @Composable
 private fun SwitchRow(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        Text(label, Modifier.weight(1f), fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Ink)
+        Text(label, Modifier.weight(1f), fontSize = 17.sp, fontWeight = FontWeight.Bold, color = Ink)
         Switch(checked, onChange, colors = SwitchDefaults.colors(checkedTrackColor = Mint))
     }
 }
@@ -121,7 +121,7 @@ private fun SwitchRow(label: String, checked: Boolean, onChange: (Boolean) -> Un
 @Composable
 private fun LinkRow(label: String, onClick: () -> Unit) {
     Bouncy(onClick, Modifier.fillMaxWidth()) {
-        Text(label, Modifier.fillMaxWidth().padding(vertical = 12.dp), fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Ink)
+        Text(label, Modifier.fillMaxWidth().padding(vertical = 7.dp), fontSize = 17.sp, fontWeight = FontWeight.Bold, color = Ink)
     }
 }
 
@@ -133,11 +133,11 @@ private fun VoiceChoice(emoji: String, label: String, selected: Boolean, modifie
                 .fillMaxWidth()
                 .background(if (selected) Mint.copy(alpha = 0.18f) else Color.Transparent, RoundedCornerShape(20.dp))
                 .border(3.dp, if (selected) Mint else Color(0xFFE0E0E0), RoundedCornerShape(20.dp))
-                .padding(vertical = 14.dp),
+                .padding(vertical = 6.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(emoji, fontSize = 40.sp)
-            Text(label, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Ink)
+            Text(emoji, fontSize = 30.sp)
+            Text(label, fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Ink)
         }
     }
 }
@@ -146,7 +146,7 @@ private fun VoiceChoice(emoji: String, label: String, selected: Boolean, modifie
 fun PrivacyScreen(onBack: () -> Unit) {
     KidScreen("Privacy policy", Grape, onBack) {
         Column(Modifier.verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 8.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text("Last updated: 31 October 2026", color = Color.Gray, fontSize = 14.sp)
+            Text("Last updated: 31 October 2026", color = Muted, fontSize = 14.sp)
             PrivacyText.sections.forEach { (title, body) ->
                 Heading(title)
                 Text(body, fontSize = 16.sp, color = Ink, lineHeight = 23.sp)
@@ -159,7 +159,7 @@ private object PrivacyText {
     val sections = listOf(
         "Our promise" to "AtoZ Kids is a learning app for young children. It works completely offline and does not collect, store or share any personal information about you or your child.",
         "No internet, no tracking" to "The app does not ask for internet access. It has no advertising, no analytics, no accounts, no push notifications and no third-party services. Nothing leaves your device.",
-        "What stays on your device" to "The app remembers only your settings (sound, music and voice choice) and the number of stars your child has earned. This is stored privately on the device and is removed when you uninstall the app or clear its data.",
+        "What stays on your device" to "The app remembers only your settings (sound, music and voice choice), the stars your child has earned, their best quiz scores and the letters and numbers they have traced. This is stored privately on the device and is removed when you uninstall the app or clear its data.",
         "Permissions" to "The app does not need any permissions. When a grown-up chooses Share or Contact us, your device's own sharing or e-mail app opens. These two buttons are protected by a simple question for grown-ups.",
         "Children's privacy" to "Because we collect no data at all, we never knowingly collect information from children. The app is designed to be suitable for children and to comply with children's privacy rules such as COPPA and GDPR-K.",
         "Changes" to "If this policy ever changes, the new version will appear here in the app with a new date.",

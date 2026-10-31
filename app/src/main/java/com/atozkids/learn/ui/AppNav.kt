@@ -17,15 +17,21 @@ fun AppNav() {
                 onLearn = { nav.navigate("categories/learn") },
                 onQuiz = { nav.navigate("categories/quiz") },
                 onRhymes = { nav.navigate("rhymes") },
+                onPlay = { nav.navigate("play") },
                 onSettings = { nav.navigate("settings") },
             )
         }
         composable("categories/{mode}", listOf(navArgument("mode") { type = NavType.StringType })) { entry ->
             val mode = entry.arguments!!.getString("mode")!!
-            CategoriesScreen(learn = mode == "learn", onBack = back, onPick = { nav.navigate("$mode/$it") })
+            CategoriesScreen(mode, onBack = back, onPick = { nav.navigate("$mode/$it") })
         }
         composable("learn/{id}") { LearnScreen(it.arguments!!.getString("id")!!, back) }
         composable("quiz/{id}") { QuizScreen(it.arguments!!.getString("id")!!, back) }
+        composable("play") {
+            PlayScreen(back, onMemory = { nav.navigate("categories/memory") }, onTrace = { nav.navigate("trace") })
+        }
+        composable("memory/{id}") { MemoryScreen(it.arguments!!.getString("id")!!, back) }
+        composable("trace") { TraceScreen(back) }
         composable("rhymes") { RhymesScreen(back) { id -> nav.navigate("rhyme/$id") } }
         composable("rhyme/{id}") { RhymePlayerScreen(it.arguments!!.getString("id")!!, back) }
         composable("settings") { SettingsScreen(back) { nav.navigate("privacy") } }

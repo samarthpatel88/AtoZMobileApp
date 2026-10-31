@@ -1,56 +1,47 @@
 package com.atozkids.learn.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.itemsIndexed
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Text
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.atozkids.learn.LocalGraph
-import com.atozkids.learn.quiz.QuizEngine
 
-/** Picks what to learn or be quizzed on. [learn] decides the title and colour. */
+/** Picks a category to learn, be quizzed on or play with, depending on [mode]. */
 @Composable
-fun CategoriesScreen(learn: Boolean, onBack: () -> Unit, onPick: (String) -> Unit) {
-    val categories = LocalGraph.current.content.categories
-    KidScreen(if (learn) "What to learn?" else "Pick a quiz", if (learn) Coral else Sky, onBack) {
+fun CategoriesScreen(mode: String, onBack: () -> Unit, onPick: (String) -> Unit) {
+    val graph = LocalGraph.current
+    val (title, color) = when (mode) {
+        "learn" -> "What to learn?" to Coral
+        "quiz" -> "Pick a quiz" to Sky
+        else -> "Memory match" to Orange
+    }
+    KidScreen(title, color, onBack) {
         LazyVerticalGrid(
-            GridCells.Adaptive(150.dp),
+            GridCells.Adaptive(104.dp),
             Modifier.fillMaxSize(),
-            contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
+            contentPadding = PaddingValues(start = 14.dp, end = 14.dp, top = 4.dp, bottom = 14.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            itemsIndexed(categories) { index, cat ->
-                val color = CategoryColors[index % CategoryColors.size]
-                Bouncy({ onPick(cat.id) }, Modifier.fillMaxWidth().aspectRatio(0.85f)) {
+            items(graph.content.categories) { cat ->
+                Bouncy({ onPick(cat.id) }, Modifier.fillMaxWidth()) {
                     Column(
-                        Modifier
-                            .fillMaxSize()
-                            .shadow(6.dp, RoundedCornerShape(28.dp))
-                            .clip(RoundedCornerShape(28.dp))
-                            .background(Color.White)
-                            .padding(10.dp),
+                        Modifier.fillMaxWidth().kidCard(20.dp).padding(6.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                        AssetImage(cat.icon, Modifier.weight(1f).fillMaxWidth())
-                        Text(cat.title, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = color, modifier = Modifier.padding(top = 6.dp))
-                        Text(if (learn) "${cat.items.size} to learn" else "${minOf(QuizEngine.QUESTIONS, cat.items.size)} questions", fontSize = 13.sp, color = Color.Gray)
+                        // The icon artwork already shows the category's name.
+                        AssetImage(cat.icon, Modifier.fillMaxWidth().aspectRatio(0.82f))
+                        if (mode == "quiz") StarRow(graph.prefs.bestStars(cat.id), Modifier.padding(top = 4.dp))
                     }
                 }
             }

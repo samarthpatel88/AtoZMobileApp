@@ -1,11 +1,14 @@
 package com.atozkids.learn
 
 import com.atozkids.learn.data.Content
+import com.atozkids.learn.quiz.Memory
 import com.atozkids.learn.quiz.QuestionType
 import com.atozkids.learn.quiz.QuizEngine
+import com.atozkids.learn.quiz.TraceGrid
 import java.io.File
 import kotlin.random.Random
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -44,6 +47,48 @@ class ContentAndQuizTest {
             }
             assertEquals(qs.size, qs.map { it.target.id }.toSet().size)
         }
+    }
+
+    @Test
+    fun quizPromptsAreWrittenOutAndLettersMatch() {
+        for (cat in content.categories) for (q in QuizEngine.build(cat, Random(2))) {
+            assertTrue(q.prompt.isNotBlank())
+            if (q.type == QuestionType.PICK_PICTURE) assertTrue(q.prompt, q.prompt.endsWith(q.target.name))
+        }
+        assertTrue(content.category("alphabet").items.all { it.name.startsWith(it.letter!!) })
+    }
+
+    @Test
+    fun memoryDealsEachPictureTwice() {
+        for (cat in content.categories) {
+            val cards = Memory.deal(cat.items, Random(3))
+            assertEquals(Memory.PAIRS * 2, cards.size)
+            assertTrue(cards.groupBy { it.pair }.values.all { it.size == 2 })
+            assertEquals(cards.indices.toList(), cards.map { it.id })
+        }
+    }
+
+    @Test
+    fun tracingNeedsTheShapeAndNotAScribble() {
+        // A vertical bar nine cells wide down the middle of a 30 by 30 grid.
+        val size = 30
+        val bar = BooleanArray(size * size) { (it % size) in 11..19 }
+
+        val traced = TraceGrid(size, bar)
+        assertFalse(traced.done)
+        for (y in 0 until size) traced.stamp(15f, y.toFloat())
+        assertTrue(traced.done)
+
+        val partly = TraceGrid(size, bar)
+        for (y in 0 until 12) partly.stamp(15f, y.toFloat())
+        assertFalse(partly.done)
+
+        val scribble = TraceGrid(size, bar)
+        for (y in 0 until size) for (x in 0 until size) scribble.stamp(x.toFloat(), y.toFloat())
+        assertFalse(scribble.done)
+
+        traced.clear()
+        assertFalse(traced.done)
     }
 
     @Test
