@@ -26,15 +26,17 @@ jobs:
           echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release.jks"
           echo "RELEASE_KEYSTORE_FILE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
 
-      - name: Signed release bundle
+      - name: Signed release bundle and APK
         env:
           RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
           RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
           RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
-        run: ./gradlew --no-daemon bundleRelease
+        run: ./gradlew --no-daemon bundleRelease assembleRelease
 
       - uses: actions/upload-artifact@v4
         with:
           name: atoz-kids-release-${{ github.run_number }}
-          path: app/build/outputs/bundle/release/app-release.aab
+          path: |
+            app/build/outputs/bundle/release/app-release.aab
+            app/build/outputs/apk/release/app-release.apk
           retention-days: 14
