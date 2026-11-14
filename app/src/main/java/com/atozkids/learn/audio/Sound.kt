@@ -18,9 +18,10 @@ class Sound(private val context: Context, private val prefs: Prefs) {
         .build()
 
     private val pool = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(attrs).build()
-    private val effects = listOf("click", "success", "fail", "cheer", "star").associateWith { name ->
-        assets.openFd("audio/sfx/$name.mp3").use { pool.load(it, 1) }
-    }
+    // A missing or unreadable effect is skipped; sound must never stop the app from starting.
+    private val effects = listOf("click", "success", "fail", "cheer", "star").mapNotNull { name ->
+        runCatching { name to assets.openFd("audio/sfx/$name.mp3").use { pool.load(it, 1) } }.getOrNull()
+    }.toMap()
 
     private var voice: MediaPlayer? = null
     private var rhyme: MediaPlayer? = null
@@ -44,11 +45,11 @@ class Sound(private val context: Context, private val prefs: Prefs) {
     fun speak(assetPath: String) {
         stopVoice()
         voice = player(assetPath, loop = false, onDone = { if (voice === it) stopVoice() })
-        voice?.start()
+        voice?.safely { start() }
     }
 
     fun stopVoice() {
-        voice?.release()
+        voice?.safely { release() }
         voice = null
     }
 
@@ -58,20 +59,20 @@ class Sound(private val context: Context, private val prefs: Prefs) {
         stopRhyme()
         stopVoice()
         rhyme = player(assetPath, loop = false, onDone = {})
-        music?.pause()
-        rhyme?.start()
+        music?.safely { pause() }
+        rhyme?.safely { start() }
     }
 
-    val rhymeDurationMs get() = rhyme?.duration ?: 0
-    val rhymePositionMs get() = rhyme?.currentPosition ?: 0
-    val rhymePlaying get() = rhyme?.isPlaying == true
+    val rhymeDurationMs get() = rhyme?.safely { duration } ?: 0
+    val rhymePositionMs get() = rhyme?.safely { currentPosition } ?: 0
+    val rhymePlaying get() = rhyme?.safely { isPlaying } == true
 
-    fun pauseRhyme() { rhyme?.pause() }
-    fun resumeRhyme() { rhyme?.start() }
-    fun seekRhyme(ms: Int) { rhyme?.seekTo(ms) }
+    fun pauseRhyme() { rhyme?.safely { pause() } }
+    fun resumeRhyme() { rhyme?.safely { start() } }
+    fun seekRhyme(ms: Int) { rhyme?.safely { seekTo(ms) } }
 
     fun stopRhyme() {
-        rhyme?.release()
+        rhyme?.safely { release() }
         rhyme = null
         syncMusic()
     }
@@ -85,9 +86,9 @@ class Sound(private val context: Context, private val prefs: Prefs) {
             if (music == null) {
                 music = player("audio/sfx/music.mp3", loop = true, onDone = {})?.apply { setVolume(0.28f, 0.28f) }
             }
-            music?.takeIf { !it.isPlaying }?.start()
+            music?.safely { if (!isPlaying) start() }
         } else {
-            music?.takeIf { it.isPlaying }?.pause()
+            music?.safely { if (isPlaying) pause() }
         }
     }
 
@@ -96,19 +97,30 @@ class Sound(private val context: Context, private val prefs: Prefs) {
     fun onBackground() {
         inForeground = false
         stopVoice()
-        rhyme?.pause()
-        music?.pause()
+        rhyme?.safely { pause() }
+        music?.safely { pause() }
     }
 
-    private fun player(path: String, loop: Boolean, onDone: (MediaPlayer) -> Unit): MediaPlayer? = try {
-        MediaPlayer().apply {
-            setAudioAttributes(attrs)
-            assets.openFd(path).use { setDataSource(it.fileDescriptor, it.startOffset, it.length) }
-            isLooping = loop
-            setOnCompletionListener { onDone(it) }
-            prepare()
+    private fun player(path: String, loop: Boolean, onDone: (MediaPlayer) -> Unit): MediaPlayer? {
+        val mp = MediaPlayer()
+        return try {
+            mp.apply {
+                setAudioAttributes(attrs)
+                assets.openFd(path).use { setDataSource(it.fileDescriptor, it.startOffset, it.length) }
+                isLooping = loop
+                setOnCompletionListener { onDone(it) }
+                prepare()
+            }
+        } catch (e: Exception) {
+            mp.release()
+            null
         }
-    } catch (e: Exception) {
+    }
+
+    /** MediaPlayer throws when called in a state it does not expect; a glitch in audio is never worth a crash. */
+    private inline fun <T> MediaPlayer.safely(block: MediaPlayer.() -> T): T? = try {
+        block()
+    } catch (e: IllegalStateException) {
         null
     }
 }

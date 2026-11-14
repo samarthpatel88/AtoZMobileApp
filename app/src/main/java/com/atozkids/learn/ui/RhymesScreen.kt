@@ -75,7 +75,7 @@ fun RhymesScreen(onBack: () -> Unit, onPick: (String) -> Unit) {
             items(rhymes) { rhyme ->
                 Bouncy({ onPick(rhyme.id) }, Modifier.fillMaxWidth()) {
                     Column(Modifier.fillMaxWidth().kidCard(20.dp)) {
-                        AssetImage(rhyme.image, Modifier.fillMaxWidth().aspectRatio(1.5f), ContentScale.Crop)
+                        AssetImage(rhyme.image, Modifier.fillMaxWidth().aspectRatio(1.5f), ContentScale.Crop, maxSide = 480)
                         Text(
                             rhyme.title,
                             Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
@@ -139,7 +139,7 @@ fun RhymePlayerScreen(rhymeId: String, onBack: () -> Unit) {
             .clickable(remember { MutableInteractionSource() }, indication = null, onClick = touched),
     ) {
         // Fills the bars beside the picture on phones wider than 3:2.
-        AssetImage(rhyme.image, Modifier.fillMaxSize().blur(24.dp), ContentScale.Crop)
+        AssetImage(rhyme.image, Modifier.fillMaxSize().blur(24.dp), ContentScale.Crop, maxSide = 480)
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.35f)))
         AssetImage(rhyme.image, Modifier.fillMaxSize())
 

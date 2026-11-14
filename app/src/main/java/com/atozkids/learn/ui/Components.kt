@@ -80,19 +80,27 @@ object ImageCache {
         override fun sizeOf(key: String, value: ImageBitmap) = value.width * value.height * 4
     }
 
-    fun peek(path: String): ImageBitmap? = cache.get(path)
+    fun peek(path: String, maxSide: Int): ImageBitmap? = cache.get("$path@$maxSide")
 
-    fun load(context: android.content.Context, path: String): ImageBitmap? =
-        cache.get(path) ?: runCatching {
-            context.assets.open(path).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
-        }.getOrNull()?.also { cache.put(path, it) }
+    /** Decodes at half size, quarter size... until the longer side fits [maxSide], so small thumbnails stay small in memory. */
+    fun load(context: android.content.Context, path: String, maxSide: Int): ImageBitmap? {
+        val key = "$path@$maxSide"
+        return cache.get(key) ?: runCatching {
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            context.assets.open(path).use { BitmapFactory.decodeStream(it, null, bounds) }
+            var sample = 1
+            while (maxOf(bounds.outWidth, bounds.outHeight) / (sample * 2) >= maxSide) sample *= 2
+            val options = BitmapFactory.Options().apply { inSampleSize = sample }
+            context.assets.open(path).use { BitmapFactory.decodeStream(it, null, options) }?.asImageBitmap()
+        }.getOrNull()?.also { cache.put(key, it) }
+    }
 }
 
 @Composable
-fun AssetImage(path: String, modifier: Modifier = Modifier, contentScale: ContentScale = ContentScale.Fit) {
+fun AssetImage(path: String, modifier: Modifier = Modifier, contentScale: ContentScale = ContentScale.Fit, maxSide: Int = 2048) {
     val context = LocalContext.current
-    val bitmap by produceState(ImageCache.peek(path), path) {
-        value = withContext(Dispatchers.IO) { ImageCache.load(context, path) }
+    val bitmap by produceState(ImageCache.peek(path, maxSide), path, maxSide) {
+        value = withContext(Dispatchers.IO) { ImageCache.load(context, path, maxSide) }
     }
     bitmap?.let { Image(it, contentDescription = null, modifier = modifier, contentScale = contentScale) }
         ?: Box(modifier)
