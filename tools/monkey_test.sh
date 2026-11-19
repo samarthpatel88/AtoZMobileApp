@@ -27,4 +27,11 @@ if grep -qE "FATAL EXCEPTION|ANR in $PKG" "$OUT/logcat.txt" "$OUT/crash.txt" || 
   echo "::error title=App crashed ($OUT)::$msg"
   exit 1
 fi
-echo "no crash or ANR in $(grep -h 'Events injected' "$OUT"/monkey-*.txt | tr '\n' ' ')"
+injected=$(grep -h 'Events injected' "$OUT"/monkey-*.txt | grep -oE '[0-9]+' | paste -sd+ | bc)
+tails=$(for f in "$OUT"/monkey-*.txt; do echo "== $(basename "$f")"; tail -4 "$f"; done | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+# A run that stopped early proves nothing, so it fails too.
+if [ "${injected:-0}" -lt 7000 ]; then
+  echo "::error title=Monkey stopped early ($OUT): ${injected:-0} events::$tails"
+  exit 1
+fi
+echo "::notice title=No crash or ANR ($OUT): $injected events::$tails"
