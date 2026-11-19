@@ -104,9 +104,12 @@ fun QuizScreen(categoryId: String, onBack: () -> Unit) {
                 modifier = Modifier.weight(1f).fillMaxWidth(),
                 label = "question",
             ) { i ->
-                QuestionView(questions[i], color) { firstTry ->
-                    if (firstTry) score++
-                    index = i + 1
+                // Never index past the last question, even for a frame while the result screen takes over.
+                questions.getOrNull(i)?.let { q ->
+                    QuestionView(q, color) { firstTry ->
+                        if (firstTry) score++
+                        index = i + 1
+                    }
                 }
             }
         }
