@@ -9,6 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "UploadFolder" / "AtoZUpload"
+# Categories added in 2026 from the design team's Drive folder (picture + caption card per item, no audio).
+NEW_SRC = ROOT / "UploadFolder" / "AppImages"
 OUT = ROOT / "app" / "src" / "main" / "assets"
 
 CATEGORIES = {
@@ -18,9 +20,20 @@ CATEGORIES = {
     4: ("animals", "Animals", "Animals"),
     5: ("fruits", "Fruits", "Fruits"),
     6: ("colors", "Colors", "Colors"),
-    7: ("shapes", "Shapes", "Shapes & Lines"),
+    7: ("shapes", "Shapes", "Shapes"),
     8: ("vehicles", "Vehicles", "Vehicles"),
 }
+# folder, icon file, (key, title, caption), item order (None = alphabetical)
+NEW_CATEGORIES = [
+    ("9.Months", "MONTHS.png", ("months", "Months", "January to December"),
+     ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]),
+    ("10.WeekDays", "WEEKDAYS.png", ("weekdays", "Days of the Week", "Monday to Sunday"),
+     ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]),
+    ("11.Sports", "SPORTS.png", ("sports", "Sports", "Sports"), None),
+    ("12.Helpers", "HELPERS.png", ("helpers", "Community Helpers", "Community Helpers"), None),
+    ("13.Lines", "LINES.png", ("lines", "Lines", "Lines & Curves"),
+     ["Standing Line", "Sleeping Line", "Left Slanting Line", "Right Slanting Line", "Up Curve", "Down Curve", "Left Curve", "Right Curve"]),
+]
 # Item folders to skip (stray uploads that belong to another category).
 SKIP = {(1, 31)}
 # Folders holding files of two items: (category, item id) -> the item they should be.
@@ -70,8 +83,10 @@ def slug(s):
 
 
 def main():
-    if OUT.exists():
-        shutil.rmtree(OUT)
+    # Only what this script makes; sound effects (make_sounds.py) and font licences stay.
+    for d in ("img", "audio/items", "audio/rhymes"):
+        if (OUT / d).exists():
+            shutil.rmtree(OUT / d)
     content = {"categories": [], "rhymes": []}
     for cid, (key, title, caption) in CATEGORIES.items():
         icon = next((SRC / "Category" / str(cid)).iterdir())
@@ -102,6 +117,8 @@ def main():
             if not (img and cap and male and female):
                 print("INCOMPLETE", cid, iid, name, img, cap, male, female)
                 continue
+            if cid == 7 and "line" in name.lower():
+                continue                                   # lines have their own category now
             sid = f"{key}_{slug(name)}"
             webp(img, OUT / "img" / "items" / f"{sid}.webp", 512)
             webp(cap, OUT / "img" / "captions" / f"{sid}.webp", 512)
@@ -115,6 +132,36 @@ def main():
                 "caption": f"img/captions/{sid}.webp",
                 "audioMale": f"audio/items/{sid}_m.mp3",
                 "audioFemale": f"audio/items/{sid}_f.mp3",
+            })
+        content["categories"].append(cat)
+
+    for folder, icon, (key, title, caption), order in NEW_CATEGORIES:
+        d = NEW_SRC / folder
+        webp(NEW_SRC / "CategoryPage" / icon, OUT / "img" / "category" / f"{key}.webp", 384)
+        cat = {"id": key, "title": title, "caption": caption, "icon": f"img/category/{key}.webp", "items": []}
+        found = {}
+        for cap in d.glob("*_text.png"):
+            stem = cap.name[: -len("_text.png")]
+            img = next((p for p in (d / f"{stem}_icon.png", d / f"{stem}_img.png") if p.exists()), None)
+            if img is None:
+                print("NO PICTURE, skipped:", folder, stem)
+                continue
+            name = " ".join(w.capitalize() if w.isupper() else w for w in stem.replace("_", " ").split())
+            found[name] = (img, cap)
+        names = order or sorted(found)
+        missing = [n for n in names if n not in found]
+        if missing:
+            raise SystemExit(f"{folder}: missing {missing}")
+        for name in names:
+            img, cap = found[name]
+            sid = f"{key}_{slug(name)}"
+            webp(img, OUT / "img" / "items" / f"{sid}.webp", 512)
+            webp(cap, OUT / "img" / "captions" / f"{sid}.webp", 512)
+            cat["items"].append({
+                "id": sid, "name": name, "letter": None,
+                "image": f"img/items/{sid}.webp", "caption": f"img/captions/{sid}.webp",
+                # Written by tools/make_voices.py, which voices every item in the app.
+                "audioMale": f"audio/items/{sid}_m.mp3", "audioFemale": f"audio/items/{sid}_f.mp3",
             })
         content["categories"].append(cat)
 

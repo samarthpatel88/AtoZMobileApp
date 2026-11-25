@@ -27,7 +27,10 @@ class ContentAndQuizTest {
 
     @Test
     fun contentHasExpectedShape() {
-        assertEquals(8, content.categories.size)
+        assertEquals(13, content.categories.size)
+        assertTrue(content.category("shapes").items.none { "Line" in it.name })
+        assertEquals("December", content.category("months").items.last().name)
+        assertEquals("Sunday", content.category("weekdays").items.last().name)
         assertTrue(content.categories.all { it.items.size >= 4 })
         assertEquals(26, content.category("alphabet").items.size)
         assertTrue(content.category("alphabet").items.all { it.letter != null })
@@ -54,7 +57,14 @@ class ContentAndQuizTest {
         for (cat in content.categories) for (q in QuizEngine.build(cat, Random(2))) {
             assertTrue(q.prompt.isNotBlank())
             if (q.type == QuestionType.PICK_PICTURE) assertTrue(q.prompt, q.prompt.endsWith(q.target.name))
+            if (q.type == QuestionType.PICK_NEXT) {
+                val items = cat.items
+                assertEquals(q.prompt, q.target, items[(items.indexOf(q.cue) + 1) % items.size])
+                assertTrue(q.options.none { it.id == q.cue.id })
+            }
         }
+        assertTrue(content.categories.filter { it.id in setOf("months", "weekdays") }
+            .all { c -> QuizEngine.build(c, Random(4)).any { it.type == QuestionType.PICK_NEXT } })
         assertTrue(content.category("alphabet").items.all { it.name.startsWith(it.letter!!) })
     }
 

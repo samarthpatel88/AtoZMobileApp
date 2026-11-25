@@ -143,7 +143,7 @@ private fun QuestionView(q: Question, color: Color, onDone: (firstTry: Boolean) 
         val question = @Composable {
             Text(q.prompt, Modifier.fillMaxWidth(), fontSize = 24.sp, lineHeight = 28.sp, fontWeight = FontWeight.ExtraBold, color = Ink, textAlign = TextAlign.Center)
         }
-        val picture = @Composable { mod: Modifier -> AssetImage(q.target.picture, mod.kidCard(24.dp).padding(10.dp)) }
+        val picture = @Composable { mod: Modifier -> AssetImage(q.cue.picture, mod.kidCard(24.dp).padding(10.dp)) }
         val options = @Composable { mod: Modifier ->
             Column(mod, verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 q.options.chunked(2).forEach { pair ->
@@ -205,7 +205,7 @@ private fun OptionTile(q: Question, option: Item, color: Color, state: OptionSta
         ) {
             when (q.type) {
                 QuestionType.PICK_PICTURE -> AssetImage(option.picture, Modifier.fillMaxSize())
-                QuestionType.PICK_NAME -> Text(option.name, fontSize = 22.sp, lineHeight = 25.sp, fontWeight = FontWeight.ExtraBold, color = color, textAlign = TextAlign.Center)
+                QuestionType.PICK_NAME, QuestionType.PICK_NEXT -> Text(option.name, fontSize = 22.sp, lineHeight = 25.sp, fontWeight = FontWeight.ExtraBold, color = color, textAlign = TextAlign.Center)
                 QuestionType.PICK_LETTER -> Text(option.letter ?: "", fontSize = 44.sp, fontWeight = FontWeight.ExtraBold, color = color)
             }
         }

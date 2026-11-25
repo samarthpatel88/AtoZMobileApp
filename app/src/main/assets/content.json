@@ -906,7 +906,7 @@
   {
    "id": "shapes",
    "title": "Shapes",
-   "caption": "Shapes & Lines",
+   "caption": "Shapes",
    "icon": "img/category/shapes.webp",
    "items": [
     {
@@ -1016,33 +1016,6 @@
      "caption": "img/captions/shapes_triangle.webp",
      "audioMale": "audio/items/shapes_triangle_m.mp3",
      "audioFemale": "audio/items/shapes_triangle_f.mp3"
-    },
-    {
-     "id": "shapes_standing_line",
-     "name": "Standing Line",
-     "letter": null,
-     "image": "img/items/shapes_standing_line.webp",
-     "caption": "img/captions/shapes_standing_line.webp",
-     "audioMale": "audio/items/shapes_standing_line_m.mp3",
-     "audioFemale": "audio/items/shapes_standing_line_f.mp3"
-    },
-    {
-     "id": "shapes_sleeping_line",
-     "name": "Sleeping Line",
-     "letter": null,
-     "image": "img/items/shapes_sleeping_line.webp",
-     "caption": "img/captions/shapes_sleeping_line.webp",
-     "audioMale": "audio/items/shapes_sleeping_line_m.mp3",
-     "audioFemale": "audio/items/shapes_sleeping_line_f.mp3"
-    },
-    {
-     "id": "shapes_slanting_line",
-     "name": "Slanting Line",
-     "letter": null,
-     "image": "img/items/shapes_slanting_line.webp",
-     "caption": "img/captions/shapes_slanting_line.webp",
-     "audioMale": "audio/items/shapes_slanting_line_m.mp3",
-     "audioFemale": "audio/items/shapes_slanting_line_f.mp3"
     }
    ]
   },
@@ -1186,6 +1159,568 @@
      "caption": "img/captions/vehicles_truck.webp",
      "audioMale": "audio/items/vehicles_truck_m.mp3",
      "audioFemale": "audio/items/vehicles_truck_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "months",
+   "title": "Months",
+   "caption": "January to December",
+   "icon": "img/category/months.webp",
+   "items": [
+    {
+     "id": "months_january",
+     "name": "January",
+     "letter": null,
+     "image": "img/items/months_january.webp",
+     "caption": "img/captions/months_january.webp",
+     "audioMale": "audio/items/months_january_m.mp3",
+     "audioFemale": "audio/items/months_january_f.mp3"
+    },
+    {
+     "id": "months_february",
+     "name": "February",
+     "letter": null,
+     "image": "img/items/months_february.webp",
+     "caption": "img/captions/months_february.webp",
+     "audioMale": "audio/items/months_february_m.mp3",
+     "audioFemale": "audio/items/months_february_f.mp3"
+    },
+    {
+     "id": "months_march",
+     "name": "March",
+     "letter": null,
+     "image": "img/items/months_march.webp",
+     "caption": "img/captions/months_march.webp",
+     "audioMale": "audio/items/months_march_m.mp3",
+     "audioFemale": "audio/items/months_march_f.mp3"
+    },
+    {
+     "id": "months_april",
+     "name": "April",
+     "letter": null,
+     "image": "img/items/months_april.webp",
+     "caption": "img/captions/months_april.webp",
+     "audioMale": "audio/items/months_april_m.mp3",
+     "audioFemale": "audio/items/months_april_f.mp3"
+    },
+    {
+     "id": "months_may",
+     "name": "May",
+     "letter": null,
+     "image": "img/items/months_may.webp",
+     "caption": "img/captions/months_may.webp",
+     "audioMale": "audio/items/months_may_m.mp3",
+     "audioFemale": "audio/items/months_may_f.mp3"
+    },
+    {
+     "id": "months_june",
+     "name": "June",
+     "letter": null,
+     "image": "img/items/months_june.webp",
+     "caption": "img/captions/months_june.webp",
+     "audioMale": "audio/items/months_june_m.mp3",
+     "audioFemale": "audio/items/months_june_f.mp3"
+    },
+    {
+     "id": "months_july",
+     "name": "July",
+     "letter": null,
+     "image": "img/items/months_july.webp",
+     "caption": "img/captions/months_july.webp",
+     "audioMale": "audio/items/months_july_m.mp3",
+     "audioFemale": "audio/items/months_july_f.mp3"
+    },
+    {
+     "id": "months_august",
+     "name": "August",
+     "letter": null,
+     "image": "img/items/months_august.webp",
+     "caption": "img/captions/months_august.webp",
+     "audioMale": "audio/items/months_august_m.mp3",
+     "audioFemale": "audio/items/months_august_f.mp3"
+    },
+    {
+     "id": "months_september",
+     "name": "September",
+     "letter": null,
+     "image": "img/items/months_september.webp",
+     "caption": "img/captions/months_september.webp",
+     "audioMale": "audio/items/months_september_m.mp3",
+     "audioFemale": "audio/items/months_september_f.mp3"
+    },
+    {
+     "id": "months_october",
+     "name": "October",
+     "letter": null,
+     "image": "img/items/months_october.webp",
+     "caption": "img/captions/months_october.webp",
+     "audioMale": "audio/items/months_october_m.mp3",
+     "audioFemale": "audio/items/months_october_f.mp3"
+    },
+    {
+     "id": "months_november",
+     "name": "November",
+     "letter": null,
+     "image": "img/items/months_november.webp",
+     "caption": "img/captions/months_november.webp",
+     "audioMale": "audio/items/months_november_m.mp3",
+     "audioFemale": "audio/items/months_november_f.mp3"
+    },
+    {
+     "id": "months_december",
+     "name": "December",
+     "letter": null,
+     "image": "img/items/months_december.webp",
+     "caption": "img/captions/months_december.webp",
+     "audioMale": "audio/items/months_december_m.mp3",
+     "audioFemale": "audio/items/months_december_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "weekdays",
+   "title": "Days of the Week",
+   "caption": "Monday to Sunday",
+   "icon": "img/category/weekdays.webp",
+   "items": [
+    {
+     "id": "weekdays_monday",
+     "name": "Monday",
+     "letter": null,
+     "image": "img/items/weekdays_monday.webp",
+     "caption": "img/captions/weekdays_monday.webp",
+     "audioMale": "audio/items/weekdays_monday_m.mp3",
+     "audioFemale": "audio/items/weekdays_monday_f.mp3"
+    },
+    {
+     "id": "weekdays_tuesday",
+     "name": "Tuesday",
+     "letter": null,
+     "image": "img/items/weekdays_tuesday.webp",
+     "caption": "img/captions/weekdays_tuesday.webp",
+     "audioMale": "audio/items/weekdays_tuesday_m.mp3",
+     "audioFemale": "audio/items/weekdays_tuesday_f.mp3"
+    },
+    {
+     "id": "weekdays_wednesday",
+     "name": "Wednesday",
+     "letter": null,
+     "image": "img/items/weekdays_wednesday.webp",
+     "caption": "img/captions/weekdays_wednesday.webp",
+     "audioMale": "audio/items/weekdays_wednesday_m.mp3",
+     "audioFemale": "audio/items/weekdays_wednesday_f.mp3"
+    },
+    {
+     "id": "weekdays_thursday",
+     "name": "Thursday",
+     "letter": null,
+     "image": "img/items/weekdays_thursday.webp",
+     "caption": "img/captions/weekdays_thursday.webp",
+     "audioMale": "audio/items/weekdays_thursday_m.mp3",
+     "audioFemale": "audio/items/weekdays_thursday_f.mp3"
+    },
+    {
+     "id": "weekdays_friday",
+     "name": "Friday",
+     "letter": null,
+     "image": "img/items/weekdays_friday.webp",
+     "caption": "img/captions/weekdays_friday.webp",
+     "audioMale": "audio/items/weekdays_friday_m.mp3",
+     "audioFemale": "audio/items/weekdays_friday_f.mp3"
+    },
+    {
+     "id": "weekdays_saturday",
+     "name": "Saturday",
+     "letter": null,
+     "image": "img/items/weekdays_saturday.webp",
+     "caption": "img/captions/weekdays_saturday.webp",
+     "audioMale": "audio/items/weekdays_saturday_m.mp3",
+     "audioFemale": "audio/items/weekdays_saturday_f.mp3"
+    },
+    {
+     "id": "weekdays_sunday",
+     "name": "Sunday",
+     "letter": null,
+     "image": "img/items/weekdays_sunday.webp",
+     "caption": "img/captions/weekdays_sunday.webp",
+     "audioMale": "audio/items/weekdays_sunday_m.mp3",
+     "audioFemale": "audio/items/weekdays_sunday_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "sports",
+   "title": "Sports",
+   "caption": "Sports",
+   "icon": "img/category/sports.webp",
+   "items": [
+    {
+     "id": "sports_badminton",
+     "name": "Badminton",
+     "letter": null,
+     "image": "img/items/sports_badminton.webp",
+     "caption": "img/captions/sports_badminton.webp",
+     "audioMale": "audio/items/sports_badminton_m.mp3",
+     "audioFemale": "audio/items/sports_badminton_f.mp3"
+    },
+    {
+     "id": "sports_boxing",
+     "name": "Boxing",
+     "letter": null,
+     "image": "img/items/sports_boxing.webp",
+     "caption": "img/captions/sports_boxing.webp",
+     "audioMale": "audio/items/sports_boxing_m.mp3",
+     "audioFemale": "audio/items/sports_boxing_f.mp3"
+    },
+    {
+     "id": "sports_chess",
+     "name": "Chess",
+     "letter": null,
+     "image": "img/items/sports_chess.webp",
+     "caption": "img/captions/sports_chess.webp",
+     "audioMale": "audio/items/sports_chess_m.mp3",
+     "audioFemale": "audio/items/sports_chess_f.mp3"
+    },
+    {
+     "id": "sports_cricket",
+     "name": "Cricket",
+     "letter": null,
+     "image": "img/items/sports_cricket.webp",
+     "caption": "img/captions/sports_cricket.webp",
+     "audioMale": "audio/items/sports_cricket_m.mp3",
+     "audioFemale": "audio/items/sports_cricket_f.mp3"
+    },
+    {
+     "id": "sports_football",
+     "name": "Football",
+     "letter": null,
+     "image": "img/items/sports_football.webp",
+     "caption": "img/captions/sports_football.webp",
+     "audioMale": "audio/items/sports_football_m.mp3",
+     "audioFemale": "audio/items/sports_football_f.mp3"
+    },
+    {
+     "id": "sports_hockey",
+     "name": "Hockey",
+     "letter": null,
+     "image": "img/items/sports_hockey.webp",
+     "caption": "img/captions/sports_hockey.webp",
+     "audioMale": "audio/items/sports_hockey_m.mp3",
+     "audioFemale": "audio/items/sports_hockey_f.mp3"
+    },
+    {
+     "id": "sports_kabaddi",
+     "name": "Kabaddi",
+     "letter": null,
+     "image": "img/items/sports_kabaddi.webp",
+     "caption": "img/captions/sports_kabaddi.webp",
+     "audioMale": "audio/items/sports_kabaddi_m.mp3",
+     "audioFemale": "audio/items/sports_kabaddi_f.mp3"
+    },
+    {
+     "id": "sports_karate",
+     "name": "Karate",
+     "letter": null,
+     "image": "img/items/sports_karate.webp",
+     "caption": "img/captions/sports_karate.webp",
+     "audioMale": "audio/items/sports_karate_m.mp3",
+     "audioFemale": "audio/items/sports_karate_f.mp3"
+    },
+    {
+     "id": "sports_motorsports",
+     "name": "Motorsports",
+     "letter": null,
+     "image": "img/items/sports_motorsports.webp",
+     "caption": "img/captions/sports_motorsports.webp",
+     "audioMale": "audio/items/sports_motorsports_m.mp3",
+     "audioFemale": "audio/items/sports_motorsports_f.mp3"
+    },
+    {
+     "id": "sports_tennis",
+     "name": "Tennis",
+     "letter": null,
+     "image": "img/items/sports_tennis.webp",
+     "caption": "img/captions/sports_tennis.webp",
+     "audioMale": "audio/items/sports_tennis_m.mp3",
+     "audioFemale": "audio/items/sports_tennis_f.mp3"
+    },
+    {
+     "id": "sports_wrestling",
+     "name": "Wrestling",
+     "letter": null,
+     "image": "img/items/sports_wrestling.webp",
+     "caption": "img/captions/sports_wrestling.webp",
+     "audioMale": "audio/items/sports_wrestling_m.mp3",
+     "audioFemale": "audio/items/sports_wrestling_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "helpers",
+   "title": "Community Helpers",
+   "caption": "Community Helpers",
+   "icon": "img/category/helpers.webp",
+   "items": [
+    {
+     "id": "helpers_barber",
+     "name": "Barber",
+     "letter": null,
+     "image": "img/items/helpers_barber.webp",
+     "caption": "img/captions/helpers_barber.webp",
+     "audioMale": "audio/items/helpers_barber_m.mp3",
+     "audioFemale": "audio/items/helpers_barber_f.mp3"
+    },
+    {
+     "id": "helpers_chef",
+     "name": "Chef",
+     "letter": null,
+     "image": "img/items/helpers_chef.webp",
+     "caption": "img/captions/helpers_chef.webp",
+     "audioMale": "audio/items/helpers_chef_m.mp3",
+     "audioFemale": "audio/items/helpers_chef_f.mp3"
+    },
+    {
+     "id": "helpers_dentist",
+     "name": "Dentist",
+     "letter": null,
+     "image": "img/items/helpers_dentist.webp",
+     "caption": "img/captions/helpers_dentist.webp",
+     "audioMale": "audio/items/helpers_dentist_m.mp3",
+     "audioFemale": "audio/items/helpers_dentist_f.mp3"
+    },
+    {
+     "id": "helpers_doctor",
+     "name": "Doctor",
+     "letter": null,
+     "image": "img/items/helpers_doctor.webp",
+     "caption": "img/captions/helpers_doctor.webp",
+     "audioMale": "audio/items/helpers_doctor_m.mp3",
+     "audioFemale": "audio/items/helpers_doctor_f.mp3"
+    },
+    {
+     "id": "helpers_driver",
+     "name": "Driver",
+     "letter": null,
+     "image": "img/items/helpers_driver.webp",
+     "caption": "img/captions/helpers_driver.webp",
+     "audioMale": "audio/items/helpers_driver_m.mp3",
+     "audioFemale": "audio/items/helpers_driver_f.mp3"
+    },
+    {
+     "id": "helpers_electrician",
+     "name": "Electrician",
+     "letter": null,
+     "image": "img/items/helpers_electrician.webp",
+     "caption": "img/captions/helpers_electrician.webp",
+     "audioMale": "audio/items/helpers_electrician_m.mp3",
+     "audioFemale": "audio/items/helpers_electrician_f.mp3"
+    },
+    {
+     "id": "helpers_engineer",
+     "name": "Engineer",
+     "letter": null,
+     "image": "img/items/helpers_engineer.webp",
+     "caption": "img/captions/helpers_engineer.webp",
+     "audioMale": "audio/items/helpers_engineer_m.mp3",
+     "audioFemale": "audio/items/helpers_engineer_f.mp3"
+    },
+    {
+     "id": "helpers_milkman",
+     "name": "Milkman",
+     "letter": null,
+     "image": "img/items/helpers_milkman.webp",
+     "caption": "img/captions/helpers_milkman.webp",
+     "audioMale": "audio/items/helpers_milkman_m.mp3",
+     "audioFemale": "audio/items/helpers_milkman_f.mp3"
+    },
+    {
+     "id": "helpers_nurse",
+     "name": "Nurse",
+     "letter": null,
+     "image": "img/items/helpers_nurse.webp",
+     "caption": "img/captions/helpers_nurse.webp",
+     "audioMale": "audio/items/helpers_nurse_m.mp3",
+     "audioFemale": "audio/items/helpers_nurse_f.mp3"
+    },
+    {
+     "id": "helpers_painter",
+     "name": "Painter",
+     "letter": null,
+     "image": "img/items/helpers_painter.webp",
+     "caption": "img/captions/helpers_painter.webp",
+     "audioMale": "audio/items/helpers_painter_m.mp3",
+     "audioFemale": "audio/items/helpers_painter_f.mp3"
+    },
+    {
+     "id": "helpers_peon",
+     "name": "Peon",
+     "letter": null,
+     "image": "img/items/helpers_peon.webp",
+     "caption": "img/captions/helpers_peon.webp",
+     "audioMale": "audio/items/helpers_peon_m.mp3",
+     "audioFemale": "audio/items/helpers_peon_f.mp3"
+    },
+    {
+     "id": "helpers_pilot",
+     "name": "Pilot",
+     "letter": null,
+     "image": "img/items/helpers_pilot.webp",
+     "caption": "img/captions/helpers_pilot.webp",
+     "audioMale": "audio/items/helpers_pilot_m.mp3",
+     "audioFemale": "audio/items/helpers_pilot_f.mp3"
+    },
+    {
+     "id": "helpers_policeman",
+     "name": "Policeman",
+     "letter": null,
+     "image": "img/items/helpers_policeman.webp",
+     "caption": "img/captions/helpers_policeman.webp",
+     "audioMale": "audio/items/helpers_policeman_m.mp3",
+     "audioFemale": "audio/items/helpers_policeman_f.mp3"
+    },
+    {
+     "id": "helpers_porter",
+     "name": "Porter",
+     "letter": null,
+     "image": "img/items/helpers_porter.webp",
+     "caption": "img/captions/helpers_porter.webp",
+     "audioMale": "audio/items/helpers_porter_m.mp3",
+     "audioFemale": "audio/items/helpers_porter_f.mp3"
+    },
+    {
+     "id": "helpers_postman",
+     "name": "Postman",
+     "letter": null,
+     "image": "img/items/helpers_postman.webp",
+     "caption": "img/captions/helpers_postman.webp",
+     "audioMale": "audio/items/helpers_postman_m.mp3",
+     "audioFemale": "audio/items/helpers_postman_f.mp3"
+    },
+    {
+     "id": "helpers_potter",
+     "name": "Potter",
+     "letter": null,
+     "image": "img/items/helpers_potter.webp",
+     "caption": "img/captions/helpers_potter.webp",
+     "audioMale": "audio/items/helpers_potter_m.mp3",
+     "audioFemale": "audio/items/helpers_potter_f.mp3"
+    },
+    {
+     "id": "helpers_soldier",
+     "name": "Soldier",
+     "letter": null,
+     "image": "img/items/helpers_soldier.webp",
+     "caption": "img/captions/helpers_soldier.webp",
+     "audioMale": "audio/items/helpers_soldier_m.mp3",
+     "audioFemale": "audio/items/helpers_soldier_f.mp3"
+    },
+    {
+     "id": "helpers_teacher",
+     "name": "Teacher",
+     "letter": null,
+     "image": "img/items/helpers_teacher.webp",
+     "caption": "img/captions/helpers_teacher.webp",
+     "audioMale": "audio/items/helpers_teacher_m.mp3",
+     "audioFemale": "audio/items/helpers_teacher_f.mp3"
+    },
+    {
+     "id": "helpers_ticket_checker",
+     "name": "Ticket Checker",
+     "letter": null,
+     "image": "img/items/helpers_ticket_checker.webp",
+     "caption": "img/captions/helpers_ticket_checker.webp",
+     "audioMale": "audio/items/helpers_ticket_checker_m.mp3",
+     "audioFemale": "audio/items/helpers_ticket_checker_f.mp3"
+    },
+    {
+     "id": "helpers_washerman",
+     "name": "Washerman",
+     "letter": null,
+     "image": "img/items/helpers_washerman.webp",
+     "caption": "img/captions/helpers_washerman.webp",
+     "audioMale": "audio/items/helpers_washerman_m.mp3",
+     "audioFemale": "audio/items/helpers_washerman_f.mp3"
+    }
+   ]
+  },
+  {
+   "id": "lines",
+   "title": "Lines",
+   "caption": "Lines & Curves",
+   "icon": "img/category/lines.webp",
+   "items": [
+    {
+     "id": "lines_standing_line",
+     "name": "Standing Line",
+     "letter": null,
+     "image": "img/items/lines_standing_line.webp",
+     "caption": "img/captions/lines_standing_line.webp",
+     "audioMale": "audio/items/lines_standing_line_m.mp3",
+     "audioFemale": "audio/items/lines_standing_line_f.mp3"
+    },
+    {
+     "id": "lines_sleeping_line",
+     "name": "Sleeping Line",
+     "letter": null,
+     "image": "img/items/lines_sleeping_line.webp",
+     "caption": "img/captions/lines_sleeping_line.webp",
+     "audioMale": "audio/items/lines_sleeping_line_m.mp3",
+     "audioFemale": "audio/items/lines_sleeping_line_f.mp3"
+    },
+    {
+     "id": "lines_left_slanting_line",
+     "name": "Left Slanting Line",
+     "letter": null,
+     "image": "img/items/lines_left_slanting_line.webp",
+     "caption": "img/captions/lines_left_slanting_line.webp",
+     "audioMale": "audio/items/lines_left_slanting_line_m.mp3",
+     "audioFemale": "audio/items/lines_left_slanting_line_f.mp3"
+    },
+    {
+     "id": "lines_right_slanting_line",
+     "name": "Right Slanting Line",
+     "letter": null,
+     "image": "img/items/lines_right_slanting_line.webp",
+     "caption": "img/captions/lines_right_slanting_line.webp",
+     "audioMale": "audio/items/lines_right_slanting_line_m.mp3",
+     "audioFemale": "audio/items/lines_right_slanting_line_f.mp3"
+    },
+    {
+     "id": "lines_up_curve",
+     "name": "Up Curve",
+     "letter": null,
+     "image": "img/items/lines_up_curve.webp",
+     "caption": "img/captions/lines_up_curve.webp",
+     "audioMale": "audio/items/lines_up_curve_m.mp3",
+     "audioFemale": "audio/items/lines_up_curve_f.mp3"
+    },
+    {
+     "id": "lines_down_curve",
+     "name": "Down Curve",
+     "letter": null,
+     "image": "img/items/lines_down_curve.webp",
+     "caption": "img/captions/lines_down_curve.webp",
+     "audioMale": "audio/items/lines_down_curve_m.mp3",
+     "audioFemale": "audio/items/lines_down_curve_f.mp3"
+    },
+    {
+     "id": "lines_left_curve",
+     "name": "Left Curve",
+     "letter": null,
+     "image": "img/items/lines_left_curve.webp",
+     "caption": "img/captions/lines_left_curve.webp",
+     "audioMale": "audio/items/lines_left_curve_m.mp3",
+     "audioFemale": "audio/items/lines_left_curve_f.mp3"
+    },
+    {
+     "id": "lines_right_curve",
+     "name": "Right Curve",
+     "letter": null,
+     "image": "img/items/lines_right_curve.webp",
+     "caption": "img/captions/lines_right_curve.webp",
+     "audioMale": "audio/items/lines_right_curve_m.mp3",
+     "audioFemale": "audio/items/lines_right_curve_f.mp3"
     }
    ]
   }
